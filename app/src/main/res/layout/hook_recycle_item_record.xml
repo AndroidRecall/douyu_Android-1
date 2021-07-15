@@ -107,7 +107,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="@dimen/xxh_dp_20"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <com.swbg.mlivestreaming.view.gridview.NineGridView
+    <com.mp.douyu.view.gridview.NineGridView
         android:id="@+id/grid_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

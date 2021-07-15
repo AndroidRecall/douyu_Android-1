@@ -77,7 +77,7 @@
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/xxh_dp_10"
         android:layout_height="200dp" />
-    <com.swbg.mlivestreaming.view.VerticalRecyclerView
+    <com.mp.douyu.view.VerticalRecyclerView
         android:id="@+id/recycle_comment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

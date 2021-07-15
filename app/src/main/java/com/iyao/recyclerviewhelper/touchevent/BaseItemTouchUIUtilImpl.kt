@@ -6,7 +6,7 @@ import android.view.View
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.ItemTouchUIUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.swbg.mlivestreaming.R
+import com.mp.douyu.R
 
 
 open class BaseItemTouchUIUtilImpl : ItemTouchUIUtil {

@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/iv_video_image" />
 
-    <com.swbg.mlivestreaming.view.AllRoundImageView
+    <com.mp.douyu.view.AllRoundImageView
         android:id="@+id/iv_video_image"
         android:layout_width="@dimen/xxh_dp_80"
         android:layout_height="@dimen/xxh_dp_100"

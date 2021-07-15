@@ -25,7 +25,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/v1" />
 
-    <com.swbg.mlivestreaming.view.AllRoundImageView
+    <com.mp.douyu.view.AllRoundImageView
         android:id="@+id/self_avatar"
         android:layout_width="42dp"
         android:layout_height="42dp"

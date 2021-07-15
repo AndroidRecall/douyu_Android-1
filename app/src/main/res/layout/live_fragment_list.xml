@@ -41,7 +41,7 @@
         android:visibility="visible"
         app:layout_constraintVertical_bias="0.7"
         />
-    <com.swbg.mlivestreaming.view.WarningView
+    <com.mp.douyu.view.WarningView
         android:id="@+id/warningView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

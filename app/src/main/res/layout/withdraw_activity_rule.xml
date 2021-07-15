@@ -15,7 +15,7 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-    <com.swbg.mlivestreaming.view.WarningView
+    <com.mp.douyu.view.WarningView
         android:id="@+id/warningView"
         android:layout_width="match_parent"
         app:layout_constraintTop_toBottomOf="@+id/titleBar"

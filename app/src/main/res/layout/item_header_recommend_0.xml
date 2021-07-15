@@ -25,7 +25,7 @@
         android:layout_marginTop="@dimen/xxh_dp_10"
         app:layout_constraintTop_toBottomOf="@id/home_banner">
 
-        <com.swbg.mlivestreaming.view.AllRoundImageView
+        <com.mp.douyu.view.AllRoundImageView
             android:id="@+id/ib_lottery"
             android:layout_width="0dp"
             android:layout_height="@dimen/xxh_dp_120"
@@ -40,7 +40,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.swbg.mlivestreaming.view.AllRoundImageView
+            <com.mp.douyu.view.AllRoundImageView
                 android:id="@+id/ib_chess"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -50,7 +50,7 @@
                 android:layout_weight="1"
                 android:src="@mipmap/home_chess" />
 
-            <com.swbg.mlivestreaming.view.AllRoundImageView
+            <com.mp.douyu.view.AllRoundImageView
                 android:id="@+id/ib_trueman"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -69,7 +69,7 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.swbg.mlivestreaming.view.AllRoundImageView
+            <com.mp.douyu.view.AllRoundImageView
                 android:id="@+id/ib_seletronic_sports"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -80,7 +80,7 @@
                 android:layout_weight="1"
                 android:src="@mipmap/home_selectronic_sports" />
 
-            <com.swbg.mlivestreaming.view.AllRoundImageView
+            <com.mp.douyu.view.AllRoundImageView
                 android:id="@+id/ib_sports"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -100,7 +100,7 @@ android:layout_marginTop="@dimen/xxh_dp_5"
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.swbg.mlivestreaming.view.AllRoundImageView
+            <com.mp.douyu.view.AllRoundImageView
                 android:id="@+id/ib_electonic"
                 android:layout_width="match_parent"
                 android:background="@null"
@@ -111,7 +111,7 @@ android:layout_marginTop="@dimen/xxh_dp_5"
 
                 android:src="@mipmap/recommend_el" />
 
-            <com.swbg.mlivestreaming.view.AllRoundImageView
+            <com.mp.douyu.view.AllRoundImageView
                 android:id="@+id/ib_fish"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -143,7 +143,7 @@ android:layout_marginTop="@dimen/xxh_dp_5"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.swbg.mlivestreaming.view.MarqueeTextView
+            <com.mp.douyu.view.MarqueeTextView
                 android:id="@+id/tv_scroll"
                 android:layout_width="0dp"
                 android:layout_height="0dp"

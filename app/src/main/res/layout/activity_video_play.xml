@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
 
-    <com.swbg.mlivestreaming.view.CustomJzvd
+    <com.mp.douyu.view.CustomJzvd
         android:id="@+id/jz_player"
         android:layout_width="match_parent"
         app:layout_constraintTop_toTopOf="parent"

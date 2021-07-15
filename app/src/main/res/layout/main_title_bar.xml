@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/xxh_dp_50">
 
-    <com.swbg.mlivestreaming.view.AllRoundImageView
+    <com.mp.douyu.view.AllRoundImageView
         android:id="@+id/iv_avatar"
         android:layout_width="34dp"
         android:layout_height="34dp"

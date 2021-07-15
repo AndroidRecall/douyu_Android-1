@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </com.scwang.smart.refresh.layout.SmartRefreshLayout>
-    <com.swbg.mlivestreaming.view.WarningView
+    <com.mp.douyu.view.WarningView
         android:id="@+id/warningView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

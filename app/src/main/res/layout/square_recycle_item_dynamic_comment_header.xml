@@ -77,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/xxh_dp_10"
         app:layout_constraintTop_toBottomOf="@+id/tv_label">
-        <com.swbg.mlivestreaming.view.gridview.NineGridView
+        <com.mp.douyu.view.gridview.NineGridView
             android:id="@+id/grid_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -143,7 +143,7 @@
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         android:drawableStart="@mipmap/ic_comment_uncollected"/>
-    <com.swbg.mlivestreaming.view.AllRoundImageView
+    <com.mp.douyu.view.AllRoundImageView
         android:id="@+id/iv_banner"
         android:layout_width="match_parent"
         android:layout_height="@dimen/xxh_dp_100"

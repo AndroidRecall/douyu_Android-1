@@ -138,7 +138,7 @@
                     android:textSize="@dimen/xxh_sp_6" />
             </LinearLayout>
 
-            <com.swbg.mlivestreaming.view.TCCustomSwitch
+            <com.mp.douyu.view.TCCustomSwitch
                 android:id="@+id/anchor_btn_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

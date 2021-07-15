@@ -55,7 +55,7 @@
                     android:backgroundTint="@color/white"
                     android:src="@mipmap/return_back" />
             </androidx.appcompat.widget.Toolbar>
-            <com.swbg.mlivestreaming.view.AllRoundImageView
+            <com.mp.douyu.view.AllRoundImageView
             android:id="@+id/point1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleBar"
@@ -64,7 +64,7 @@
             android:layout_marginStart="@dimen/xxh_dp_30"
             android:layout_width="@dimen/xxh_dp_16"
             android:layout_height="@dimen/xxh_dp_16"/>
-            <com.swbg.mlivestreaming.view.AllRoundImageView
+            <com.mp.douyu.view.AllRoundImageView
                 android:id="@+id/point2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +73,7 @@
                 android:layout_marginStart="@dimen/xxh_dp_10"
                 android:layout_width="@dimen/xxh_dp_16"
                 android:layout_height="@dimen/xxh_dp_16"/>
-            <com.swbg.mlivestreaming.view.AllRoundImageView
+            <com.mp.douyu.view.AllRoundImageView
                 android:id="@+id/point3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/point1"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="160dp"
     android:layout_marginTop="@dimen/xxh_dp_10">
-    <com.swbg.mlivestreaming.view.AllRoundImageView
+    <com.mp.douyu.view.AllRoundImageView
         android:id="@+id/iv_ad_cover"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
