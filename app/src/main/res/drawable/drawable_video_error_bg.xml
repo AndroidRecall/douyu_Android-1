@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:radius="@dimen/xxh_dp_5"/>
+            <solid android:color="@color/colorVideoBg"/>
+            <size android:height="1920dp" android:width="1280dp"/>
+        </shape>
+    </item>
+</selector>

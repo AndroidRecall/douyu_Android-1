@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        android:scaleType="fitXY"
+        android:src="@mipmap/player_number_bg_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@+id/spacer1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/xxh_dp_20"
+        app:layout_constraintBottom_toBottomOf="@+id/iv1"
+        app:layout_constraintLeft_toLeftOf="@id/iv1"
+        app:layout_constraintRight_toRightOf="@id/iv1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_click_immediately"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/player_num_bg_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spacer1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/player_num_top"
+        android:layout_marginTop="@dimen/xxh_dp_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_player_num_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xxh_sp_11"
+        app:layout_constraintBottom_toBottomOf="@id/iv0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_15"
+        android:layout_marginEnd="@dimen/xxh_dp_25"
+        android:background="@drawable/time_bg"
+        android:drawableStart="@mipmap/player_num_time"
+        android:drawablePadding="@dimen/xxh_dp_5"
+        android:gravity="center"
+        android:paddingStart="@dimen/xxh_dp_5"
+        android:paddingTop="@dimen/xxh_dp_3"
+        android:paddingEnd="@dimen/xxh_dp_8"
+        android:paddingBottom="@dimen/xxh_dp_3"
+        android:text="00:00:00"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xxh_sp_11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_8"
+        android:text="上期号码"
+        android:textColor="#ff888989"
+        android:textSize="@dimen/xxh_sp_11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv0" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_12"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/player_one" />
+
+        <!--     <androidx.appcompat.widget.AppCompatImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@mipmap/player_two" />
+
+             <androidx.appcompat.widget.AppCompatImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@mipmap/palyer_three" />
+
+             <androidx.appcompat.widget.AppCompatImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@mipmap/player_four" />
+
+             <androidx.appcompat.widget.AppCompatImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@mipmap/player_five" />
+
+             <androidx.appcompat.widget.AppCompatImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@mipmap/player_six" />
+
+             <androidx.appcompat.widget.AppCompatImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@mipmap/player_seven" />-->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_num">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/player_num_character_bg"
+            android:gravity="center"
+            android:text="全"
+            android:textColor="#ff61b0e1"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ll_num" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_8"
+            android:background="@mipmap/player_num_character_bg"
+            android:gravity="center"
+
+            android:text="大"
+            android:textColor="#ff61b0e1"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ll_num" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_8"
+            android:background="@mipmap/player_num_character_bg"
+            android:gravity="center"
+            android:text="小"
+
+            android:textColor="#ff61b0e1"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ll_num" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_8"
+            android:background="@mipmap/player_num_character_bg"
+            android:gravity="center"
+            android:text="单"
+            android:textColor="#ff61b0e1"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ll_num" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_8"
+            android:background="@mipmap/player_num_character_bg"
+            android:gravity="center"
+            android:text="双"
+            android:textColor="#ff61b0e1"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@id/ll_num" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="立即下注"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xxh_sp_14"
+        app:layout_constraintBottom_toBottomOf="@id/iv_click_immediately"
+        app:layout_constraintEnd_toEndOf="@id/iv_click_immediately"
+        app:layout_constraintStart_toStartOf="@id/iv_click_immediately"
+        app:layout_constraintTop_toTopOf="@id/iv_click_immediately" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

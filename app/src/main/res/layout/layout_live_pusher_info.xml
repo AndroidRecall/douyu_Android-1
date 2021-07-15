@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="35dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/pusher_info_background"
+    android:orientation="horizontal"
+    android:paddingLeft="1dp"
+    android:paddingTop="1dp"
+    android:paddingRight="1dp"
+    android:paddingBottom="1dp"
+    tools:ignore="contentDescription">
+
+    <ImageView
+        android:id="@+id/iv_anchor_head_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="@dimen/xxh_dp_1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/default_avatar" />
+
+    <TextView
+        android:id="@+id/tv_anchor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_constraintTop_toTopOf="@+id/iv_anchor_head_icon"
+        app:layout_constraintStart_toEndOf="@+id/iv_anchor_head_icon"
+        android:text="性感洋洋"
+        android:layout_marginLeft="5dp"
+        android:maxLines="1"
+        android:paddingTop="2.5dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+    <ImageView
+        android:id="@+id/iv_live_hot"
+        android:src="@mipmap/ic_live_hot"
+        app:layout_constraintStart_toStartOf="@+id/tv_anchor_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_anchor_name"
+        android:layout_width="@dimen/xxh_dp_8"
+        android:layout_height="@dimen/xxh_dp_20"/>
+    <TextView
+        android:id="@+id/tv_hot_num"
+        app:layout_constraintStart_toEndOf="@+id/iv_live_hot"
+        app:layout_constraintTop_toTopOf="@+id/iv_live_hot"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_live_hot"
+        android:layout_marginStart="@dimen/xxh_dp_4"
+        android:text="800"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="5dp"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+    <ImageView
+        android:id="@+id/iv_follow_status"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="@dimen/xxh_dp_1"
+        android:layout_marginStart="@dimen/xxh_dp_4"
+        app:layout_constraintStart_toEndOf="@+id/tv_anchor_name"
+        android:src="@mipmap/icon_live_portrait_follow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

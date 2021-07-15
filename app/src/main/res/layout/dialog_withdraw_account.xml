@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_white_radius"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_rule"
+        android:text="选择提现账户"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/cl_amount"
+        android:layout_marginTop="@dimen/xxh_dp_16"
+        android:textSize="@dimen/xxh_sp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_tip"
+        android:text="添加提现账户后无法更改，最多添加3个账号"
+        android:layout_marginStart="@dimen/xxh_dp_10"
+        android:textColor="@color/color_666666"
+        android:paddingTop="@dimen/xxh_dp_4"
+        android:paddingBottom="@dimen/xxh_dp_4"
+        app:layout_constraintTop_toBottomOf="@+id/cl_amount"
+        android:layout_marginTop="@dimen/xxh_dp_16"
+        android:textSize="@dimen/xxh_sp_14"
+        android:layout_width="match_parent"
+        android:background="#F6F6F6"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_more"
+        android:text="添加更多提现账户"
+        android:layout_marginStart="@dimen/xxh_dp_10"
+
+        app:layout_constraintTop_toBottomOf="@+id/cl_amount"
+        android:layout_marginTop="@dimen/xxh_dp_16"
+        android:textSize="@dimen/xxh_sp_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

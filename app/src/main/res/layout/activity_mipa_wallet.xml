@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:background="#1A2129"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/title_bar_simple" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_service_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/xxh_dp_15"
+        android:drawableStart="@mipmap/wallet_s"
+        android:drawablePadding="@dimen/xxh_dp_5"
+        android:text="客服中心"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xxh_sp_15"
+        app:layout_constraintBottom_toBottomOf="@id/cl_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cl_1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="@dimen/xxh_dp_17"
+        android:layout_marginEnd="@dimen/xxh_dp_17"
+        android:background="@drawable/wallet_back_small"
+        app:layout_constraintBottom_toBottomOf="@id/v1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_mile_wallet_used"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wallet_back_tv"
+            android:paddingStart="@dimen/xxh_dp_10"
+            android:paddingTop="@dimen/xxh_dp_8"
+            android:paddingEnd="@dimen/xxh_dp_8"
+            android:paddingBottom="@dimen/xxh_dp_8"
+            android:text="@string/wallet_action"
+            android:textColor="#ffffffff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_account_bean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_6"
+            android:layout_marginTop="@dimen/xxh_dp_10"
+            android:text="账户余豆（个）"
+            android:textColor="#ffffffff"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/wallet_see"
+            app:layout_constraintBottom_toBottomOf="@id/tv_account_bean"
+            app:layout_constraintStart_toEndOf="@id/tv_account_bean"
+            app:layout_constraintTop_toTopOf="@id/tv_account_bean" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="@dimen/xxh_dp_6"
+            android:layout_marginTop="@dimen/xxh_dp_16"
+            android:scaleType="center"
+            android:src="@mipmap/wallet_c"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_account_bean" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_account_remain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_12"
+            android:text="0"
+            android:textColor="#ffffffff"
+            android:textSize="29sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv1"
+            app:layout_constraintStart_toEndOf="@id/iv1"
+            app:layout_constraintTop_toTopOf="@id/iv1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_charge"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xxh_dp_62"
+        android:layout_marginStart="@dimen/xxh_dp_17"
+        android:layout_marginEnd="@dimen/xxh_dp_17"
+        android:background="@drawable/wallet_back_small_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v1">
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="@dimen/xxh_dp_1"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/xxh_dp_15"
+            android:layout_marginBottom="@dimen/xxh_dp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_charge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/wallet_b"
+            android:drawablePadding="@dimen/xxh_dp_5"
+            android:text="充值"
+            android:textColor="#ff323334"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/v2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_get_mi_bean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/wallet_bean_a"
+            android:drawablePadding="@dimen/xxh_dp_5"
+            android:text="@string/get_balance"
+            android:textColor="#ff323334"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/v2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_transfer_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/wallet_a"
+            android:drawablePadding="@dimen/xxh_dp_5"
+            android:text="转账"
+            android:textColor="#ff323334"
+            android:textSize="19sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/v2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/wallet_tabLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        android:elevation="@dimen/item_card_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_charge"
+        app:tabGravity="center"
+        app:tabIndicator="@mipmap/wallet_l"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="3dp"
+        app:tabMode="scrollable"
+        app:tabPaddingTop="@dimen/xxh_dp_5"
+        app:tabRippleColor="@null"
+        app:tabSelectedTextColor="@color/colorCharacterBlack"
+        app:tabTextColor="#696A6B" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/wallet_view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wallet_tabLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar_confirm_btn" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xxh_dp_40"
+        android:gravity="start|center_vertical"
+        android:paddingLeft="@dimen/xxh_dp_14"
+        android:text="个性签名"
+        android:textColor="#ff1e2020"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_input_nickname"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xxh_dp_190"
+        android:background="@color/white"
+        android:gravity="start"
+        android:hint="输入个性签名能让别人更好地认识你喔"
+        android:maxLength="30"
+        android:paddingStart="@dimen/xxh_dp_14"
+        android:paddingTop="@dimen/xxh_dp_10"
+        android:textColor="#ff1d1e1f"
+        android:textSize="15sp"
+        android:lineSpacingMultiplier="1.4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_input_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/xxh_dp_14"
+        android:text="0/30"
+        android:textColor="#ff9f9fa0"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/et_input_nickname"
+        android:layout_marginBottom="@dimen/xxh_dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_14"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        android:lineSpacingMultiplier="1.4"
+        android:text="内容不允许出现数字、英文字母"
+        android:textColor="#ff464848"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_input_nickname" />
+</androidx.constraintlayout.widget.ConstraintLayout>

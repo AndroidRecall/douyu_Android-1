@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@android:color/white</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+<!--    <color name="colorAccent">#03DAC5</color>-->
+    <color name="colorAccent">#24A8FE</color>
+
+
+    <!-- Window -->
+    <color name="colorWindowBackground">#f0f3f8</color>
+    <color name="color80WindowBackground">#80f0f3f8</color>
+    <color name="color50WindowBackground">#50f0f3f8</color>
+
+
+    <color name="colorCharacterBlack">@android:color/black</color>
+    <color name="colorCharacterGrayHint">@android:color/darker_gray</color>
+    <color name="colorBtnBlueHint">#AED8FE</color>
+    <color name="colorBtnBlue">#24A4FD</color>
+    <color name="colorNotChoice">#717173</color>
+    <color name="colorVideoBg">#D8D8D8</color>
+    <color name="main_gray">#C1C0C9</color>
+    <color name="colorSearchStart">#CEF2FF</color>
+    <color name="colorSearchMiddle">#DEE5FF</color>
+    <color name="colorSearchEnd">#FCDFEC</color>
+    <color name="base_B5B5B5">#B5B5B5</color>
+    <color name="colorTxtBlue">#54AEE5</color>
+    <color name="colorFEEFF1">#FEEFF1</color>
+    <color name="colorF60F4B">#F60F4B</color>
+    <color name="text_all_btn_color">#8D62D1</color>
+    <color name="colorFD6A8E">#FD6A8E</color>
+    <color name="colorFFA199">#FFA199</color>
+    <color name="color_999999">#999999</color>
+
+    <color name="colorDarkGray">#22222d</color>
+    <color name="colorMiddleGray">#60637b</color>
+    <color name="colorLightGray">#9599b2</color>
+    <color name="colorC8LightGray">#c89599b2</color>
+    <color name="colorRedHint">#CCD38BB9</color>
+    <color name="colorRedPink">#F72CA9</color>
+    <color name="colorTranslucentGray90">#E68B8784</color>
+    <color name="colorTranslucentWhite90">#8FFFFFFF</color>
+    <color name="colorTranslucentWhite50">#66000000</color>
+    <color name="color00000000">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="colorAccentBlur">#806192f4</color>
+    <color name="shadow_start_color">#fce5e8f2</color>
+    <color name="shadow_mid_color">#ebeef5</color>
+    <color name="shadow_end_color">#00ebeef5</color>
+
+    <color name="color60637b">#60637b</color>
+    <color name="color_F2F2F2">#F2F2F2</color>
+    <color name="color_E4E4E4">#E4E4E4</color>
+    <color name="color_3B73B2">#3B73B2</color>
+
+
+    <color name="color_390371">#390371</color>
+    <color name="color_C594F8">#C594F8</color>
+    <color name="color_DCC6F2">#DCC6F2</color>
+    <color name="color_4688FF">#4688FF</color>
+    <color name="color_CC481D">#CC481D</color>
+    <color name="color_ff6d2904">#ff6d2904</color>
+    <color name="color_ff6a8f">#ff6a8f</color>
+    <color name="color_ffa29b">#ffa29b</color>
+    <color name="color_fffd9f5b">#fffd9f5b</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_F1F1F1">#F1F1F1</color>
+    <color name="color_C52122">#C52122</color>
+
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="black">#000000</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="transparent_10">#19000000</color>
+    <color name="transparent_20">#32000000</color>
+    <color name="transparent_30">#4c000000</color>
+    <color name="transparent_50">#7F000000</color>
+    <color name="white_t_80">#CCFFFFFF</color>
+    <color name="white_t_70">#B2FFFFFF</color>
+    <color name="white_t_50">#7FFFFFFF</color>
+
+    <color name="live_yellow_gift_txt">#F7B500</color>
+    <color name="color_B14AFD">#B14AFD</color>
+
+
+    <!--
+        <color name="colord5e0f7">#d5e0f7</color>
+        <color name="colore8ebf2">#e8ebf2</color>
+        <color name="color9599b2">#9599b2</color>
+        <color name="color60637b">#60637b</color>
+        <color name="colorF7F9FB">#f7f9fb</color>
+        <color name="colorF8F9FC">#f8f9fc</color>
+        <color name="color505066">#505066</color>
+        <color name="color6192f4">#6192f4</color>
+        <color name="colorced1e4">#ced1e4</color>
+        <color name="color70708f">#70708f</color>
+        <color name="color22222b">#22222b</color>
+        <color name="color4b5467">#4b5467</color>
+        <color name="color1b60ec">#1b60ec</color>
+        <color name="color150b60ec">#501b60ec</color>
+        <color name="color85a9f2">#85a9f2</color>
+        <color name="color0abb87">#0abb87</color>
+        <color name="color75829b">#75829b</color>
+        <color name="color07142e">#07142e</color>
+        <color name="colore6182b">#e6182b</color>
+        <color name="colorA2Accent">#a26192f4</color>
+        <color name="color66Accent">#666192f4</color>
+        <color name="color12Accent">#126192f4</color>
+        <color name="colorBlur">#60000000</color>
+        <color name="colorTranslucentWhite">#80ffffff</color>
+        <color name="color08White">#12ffffff</color>
+        <color name="color48White">#48ffffff</color>
+        <color name="color4DWhite">#4dffffff</color>
+        <color name="color66White">#66ffffff</color>
+        <color name="color80White">#80ffffff</color>
+        <color name="colorB2White">#b2ffffff</color>
+        <color name="colorA2White">#a2ffffff</color>
+        &lt;!&ndash; View &ndash;&gt;
+        <color name="colorLightBlur">#809599b2</color>
+        <color name="color20LightGray">#329599b2</color>
+        <color name="colorDarkGray">#22222d</color>
+        <color name="colorFloatingWindowBackground">#2ae5e7f9</color>
+        &lt;!&ndash; Hint &ndash;&gt;
+        <color name="colorError">#e6182b</color>
+        <color name="colorWarning">#FDB112</color>
+        <color name="colorErrorPressed">#f4716c</color>
+        <color name="colorRedHint">#CCD38BB9</color>
+        <color name="colorRight">#0abb87</color>
+        &lt;!&ndash;shadow&ndash;&gt;
+
+        &lt;!&ndash;avatar&ndash;&gt;
+        <color name="colorAvatarOne">#e67a4e</color>
+        <color name="colorAvatarTwo">#e26055</color>
+        <color name="colorAvatarThree">#ed9d3f</color>
+        <color name="colorAvatarFour">#7a7acc</color>
+        <color name="colorAvatarFive">#3ec896</color>
+        <color name="color8f93ad">#8f93ad</color>
+
+        &lt;!&ndash;calendar&ndash;&gt;
+        <color name="color0_e7ebf3">#e7ebf3</color>
+        <color name="color1_927dff">#927dff</color>
+        <color name="color2_3195e9">#3195e9</color>
+        <color name="color3_26bed1">#26bed1</color>
+        <color name="color4_24b796">#24b796</color>
+        <color name="color5_ecc15b">#ecc15b</color>
+        <color name="color6_3fc22e">#3fc22e</color>
+        <color name="color7_ffa64f">#ffa64f</color>
+        <color name="color8_ff7da5">#ff7da5</color>
+        <color name="color9_ff7d7d">#ff7d7d</color>
+
+        &lt;!&ndash;new&ndash;&gt;
+        <color name="color1db6c0">#1db6c0</color>
+        <color name="color18b781">#18b781</color>
+        <color name="color688afc">#688afc</color>
+        <color name="color2cb9ff">#2cb9ff</color>
+        <color name="colorad07142e">#ad07142e</color>
+        <color name="color07142E">#07142E</color>
+        <color name="color75829B">#75829B</color>
+        <color name="color20A94B">#20A94B</color>-->
+    <color name="colorIndicatorStart">#68DBFB</color>
+    <color name="color_D0F0F9">#D0F0F9</color>
+    <color name="colorIndicatorEnd">#CFA3EE</color>
+    <color name="colorBlur">#60000000</color>
+    <color name="colorScrollText">#ff54a4cb</color>
+    <color name="color07142e">#07142e</color>
+    <color name="colorFloatingWindowBackground">#2ae5e7f9</color>
+    <color name="colorError">#e6182b</color>
+    <color name="vip_t_one">#950B7B</color>
+    <color name="vip_t_two">#F07217</color>
+    <color name="vip_t_three">#0BABDF</color>
+    <color name="vip_t_four">#E74E9A</color>
+    <color name="vip_t_five">#8593BD</color>
+    <color name="clear_text">#70706F</color>
+    <color name="tab_select_color">#356FFF</color>
+    <color name="tab_normal_color">#FFB0B0B0</color>
+
+    <color name="TabSelect">#222222</color>
+    <color name="TabUnSelect">#666666</color>
+    <color name="gradient_start">#A353F6</color>
+    <color name="gradient_end">#1FA6E5</color>
+
+    <color name="colorTextG2">#999999</color>
+    <!--文字G3-->
+    <color name="colorTextG3">#666666</color>
+    <!--文字G4-->
+    <color name="colorTextG4">#333333</color>
+    <!--gray1-->
+    <color name="colorGray1">#F0F0F0</color>
+    <!--light gray-->
+    <!--gray2-->
+    <color name="colorGray2">#DCDCDC</color>
+    <!--gray3-->
+    <color name="colorGray3">#C8C8C8</color>
+    <!--gray4-->
+    <color name="colorGray4">#787878</color>
+</resources>

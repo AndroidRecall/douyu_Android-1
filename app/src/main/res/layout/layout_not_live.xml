@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cl_no_living"
+    >
+    <ImageView
+        android:id="@+id/iv_other_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+    <ImageView
+        android:id="@+id/iv_not_live_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/xxh_dp_20"
+        android:layout_marginEnd="@dimen/xxh_dp_20"
+        android:src="@mipmap/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_anchor_avatar"
+        android:layout_width="@dimen/xxh_dp_80"
+        android:layout_height="@dimen/xxh_dp_80"
+        android:src="@mipmap/default_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_not_live_back" />
+
+    <TextView
+        android:id="@+id/tv_live_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        android:text="直播已结束"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xxh_sp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_anchor_avatar" />
+
+    <TextView
+        android:id="@+id/tv_live_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        android:text="上次直播时间 2021.5.18 18:59"
+        android:textColor="@color/colorC8LightGray"
+        android:textSize="@dimen/xxh_sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_live_state" />
+    <TextView
+        android:id="@+id/tv_in_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_20"
+        android:text="进入直播间"
+        android:textColor="@color/white"
+        android:paddingTop="@dimen/xxh_dp_6"
+        android:paddingBottom="@dimen/xxh_dp_6"
+        android:paddingStart="@dimen/xxh_dp_30"
+        android:paddingEnd="@dimen/xxh_dp_30"
+        android:textSize="@dimen/xxh_sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/btn_gradient_201f1f_bg_layer"
+        app:layout_constraintTop_toBottomOf="@+id/tv_live_time" />
+
+    <TextView
+        android:id="@+id/tv_other_live_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_20"
+        android:text="其他直播"
+        android:textColor="@color/colorC8LightGray"
+        android:textSize="@dimen/xxh_sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_in_live" />
+
+    <View
+        android:layout_width="@dimen/xxh_dp_100"
+        android:layout_height="@dimen/xxh_dp_1"
+        android:layout_marginEnd="@dimen/xxh_dp_30"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_other_live_title"
+        app:layout_constraintEnd_toStartOf="@+id/tv_other_live_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_other_live_title" />
+
+    <View
+        android:layout_width="@dimen/xxh_dp_100"
+        android:layout_height="@dimen/xxh_dp_1"
+        android:layout_marginStart="@dimen/xxh_dp_30"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_other_live_title"
+        app:layout_constraintStart_toEndOf="@+id/tv_other_live_title"
+        app:layout_constraintTop_toTopOf="@+id/tv_other_live_title" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_other_live"
+        app:layout_constraintTop_toBottomOf="@+id/tv_other_live_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

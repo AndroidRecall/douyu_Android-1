@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_E4E4E4"
+    android:paddingTop="@dimen/xxh_dp_10"
+    android:paddingBottom="@dimen/xxh_dp_10">
+
+    <EditText
+        android:id="@+id/et_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_10"
+        android:layout_marginEnd="@dimen/xxh_dp_10"
+        android:background="@drawable/btn_white_c30_bg"
+        android:hint="我来说几句~"
+        android:imeOptions="actionSend"
+        android:padding="@dimen/xxh_dp_6"
+        android:singleLine="true"
+        android:textSize="@dimen/xxh_sp_12" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

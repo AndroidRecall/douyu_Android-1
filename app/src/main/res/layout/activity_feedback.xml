@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar_confirm_btn" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_content"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/titleBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        android:hint="在这里畅所欲言，留下您的宝贵意见～"
+        android:textColor="#ff9f9fa0"
+        android:gravity="start"
+        android:paddingStart="@dimen/xxh_dp_14"
+        android:paddingEnd="@dimen/xxh_dp_14"
+        android:paddingTop="@dimen/xxh_dp_60"
+        android:textSize="15sp"
+        android:lineSpacingMultiplier="1.4"
+        android:maxLength="500"
+        android:layout_height="300dp"/>
+
+    <TextView
+        android:id="@+id/tv_input_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/500"
+        android:textColor="#ff9f9fa0"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/et_content"
+        app:layout_constraintEnd_toEndOf="@id/et_content"
+        android:layout_marginEnd="@dimen/xxh_dp_8"
+        android:layout_marginBottom="@dimen/xxh_dp_10"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_choose"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xxh_dp_40"
+        android:layout_marginStart="@dimen/xxh_dp_14"
+        android:layout_marginTop="@dimen/xxh_dp_5"
+        android:layout_marginEnd="@dimen/xxh_dp_14"
+        android:background="@drawable/feedback_bg"
+        android:drawableStart="@mipmap/feedback_iv"
+        android:drawablePadding="@dimen/xxh_dp_5"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/xxh_dp_13"
+        android:text="请选择意见类型"
+        android:textColor="#ff4f4f50"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_down_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/feedback_down_arrow"
+        app:layout_constraintTop_toTopOf="@id/tv_choose"
+        android:layout_marginEnd="@dimen/xxh_dp_17"
+        app:layout_constraintBottom_toBottomOf="@id/tv_choose"
+        app:layout_constraintEnd_toEndOf="@id/tv_choose" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

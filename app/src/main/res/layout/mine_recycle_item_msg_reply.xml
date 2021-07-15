@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<ImageView
+    android:id="@+id/iv_avatar"
+    android:layout_width="@dimen/xxh_dp_50"
+    android:layout_height="@dimen/xxh_dp_50"
+    android:layout_marginTop="@dimen/xxh_dp_20"
+    android:layout_marginStart="@dimen/xxh_dp_20"
+    android:layout_marginEnd="@dimen/xxh_dp_20"
+    android:src="@mipmap/default_avatar"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="@+id/iv_avatar"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+        android:layout_marginStart="@dimen/xxh_dp_10"
+        tools:text="咪乐官方"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        app:layout_constraintTop_toBottomOf="@+id/iv_avatar"
+        app:layout_constraintStart_toStartOf="@+id/iv_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/xxh_dp_10"
+
+        android:ellipsize="end"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        tools:text="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"
+        android:textColor="@android:color/black"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2021-4-2 10:25:10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_name"
+        android:textSize="@dimen/xxh_sp_10"/>
+  <TextView
+      android:id="@+id/tv_origin"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="[原文] 刀马旦:真倒霉"
+      android:paddingStart="@dimen/xxh_dp_10"
+      android:background="@drawable/btn_gray1_c5_bg"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginStart="@dimen/xxh_dp_10"
+      android:layout_marginEnd="@dimen/xxh_dp_10"
+      android:paddingTop="@dimen/xxh_dp_4"
+      android:paddingBottom="@dimen/xxh_dp_4"
+      android:layout_marginTop="@dimen/xxh_dp_4"
+      android:textSize="@dimen/xxh_sp_12"
+      app:layout_constraintTop_toBottomOf="@+id/tv_content"
+      />
+</androidx.constraintlayout.widget.ConstraintLayout>

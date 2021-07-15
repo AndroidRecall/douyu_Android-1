@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@mipmap/ic_withdraw_bg"
+           >
+            <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:animateLayoutChanges="true"
+                android:elevation="@dimen/item_card_elevation"
+                app:layout_constraintTop_toTopOf="parent"
+                app:contentInsetEnd="0dp"
+                app:contentInsetStart="0dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/iftTitle"
+                    style="@style/ToolBarCustomChild.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请成为主播"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/iftActionRight"
+                    style="@style/ToolBarCustomChild.Right" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/iftActionRightSub"
+                    style="@style/ToolBarCustomChild.Right"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/iftActionLeft"
+                    android:visibility="gone"
+                    style="@style/ToolBarCustomChild.Left" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/ibReturn"
+                    android:layout_width="@dimen/xxh_dp_30"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:background="@null"
+                    android:tint="@color/white"
+                    android:layout_marginStart="@dimen/xxh_dp_15"
+                    android:backgroundTint="@color/white"
+                    android:src="@mipmap/return_back" />
+            </androidx.appcompat.widget.Toolbar>
+            <com.swbg.mlivestreaming.view.AllRoundImageView
+            android:id="@+id/point1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleBar"
+            android:src="@drawable/btn_white_circle_bg"
+                android:layout_marginTop="@dimen/xxh_dp_30"
+            android:layout_marginStart="@dimen/xxh_dp_30"
+            android:layout_width="@dimen/xxh_dp_16"
+            android:layout_height="@dimen/xxh_dp_16"/>
+            <com.swbg.mlivestreaming.view.AllRoundImageView
+                android:id="@+id/point2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/point1"
+                android:src="@drawable/btn_white_circle_bg"
+                android:layout_marginStart="@dimen/xxh_dp_10"
+                android:layout_width="@dimen/xxh_dp_16"
+                android:layout_height="@dimen/xxh_dp_16"/>
+            <com.swbg.mlivestreaming.view.AllRoundImageView
+                android:id="@+id/point3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/point1"
+                android:src="@drawable/btn_white_circle_bg"
+                android:layout_marginEnd="@dimen/xxh_dp_30"
+                android:layout_width="@dimen/xxh_dp_16"
+                android:layout_height="@dimen/xxh_dp_16"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/xxh_dp_2"
+                app:layout_constraintStart_toStartOf="@+id/point1"
+                app:layout_constraintEnd_toEndOf="@+id/point3"
+                app:layout_constraintTop_toTopOf="@+id/point1"
+                app:layout_constraintBottom_toBottomOf="@+id/point1"
+                android:background="@color/white"/>
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/point1"
+                app:layout_constraintStart_toStartOf="@+id/point1"
+                app:layout_constraintEnd_toEndOf="@+id/point1"
+                android:layout_marginTop="@dimen/xxh_dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/xxh_dp_30"
+                android:text="手机认证"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/point2"
+                app:layout_constraintStart_toStartOf="@+id/point2"
+                app:layout_constraintEnd_toEndOf="@+id/point2"
+                android:layout_marginTop="@dimen/xxh_dp_10"
+                android:text="填写个人资料"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/point3"
+                app:layout_constraintStart_toStartOf="@+id/point3"
+                app:layout_constraintEnd_toEndOf="@+id/point3"
+                android:layout_marginTop="@dimen/xxh_dp_10"
+                android:text="平台审核"
+                android:textColor="@color/white"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/ll_check"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_top"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxh_dp_50"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_checking"/>
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxh_dp_16"
+            android:textSize="@dimen/xxh_sp_14"
+            android:gravity="center"
+            android:textColor="@color/text_all_btn_color"
+            android:text="感谢您提交个人信息，我们正在审核！"/>
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxh_dp_20"
+            android:gravity="center"
+            android:text="我们将在24小时内人工处理您的申请，请您耐心等待."/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

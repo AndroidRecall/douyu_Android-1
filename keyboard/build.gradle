@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.novoda.bintray-release'
+
+//group = 'com.github.CPPAlien'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.50'
+}
+
+/*
+publish {
+    userOrg = 'pengtao'
+    groupId = 'me.pengtao'
+    artifactId = 'ChatKeyboard'
+    publishVersion = '2.0.0'
+    desc = 'ChatKeyboard is a powerful and easy using keyboard lib for Android, includes emoticons selection, audio recording, multi media functions, etc.'
+    website = 'https://github.com/CPPAlien/ChatKeyboard'
+}*/

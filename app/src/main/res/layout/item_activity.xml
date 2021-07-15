@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="@dimen/xxh_dp_16"
+        android:layout_marginTop="@dimen/xxh_dp_16"
+        android:layout_marginEnd="@dimen/xxh_dp_16"
+        android:background="@drawable/activity_item_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.swbg.mlivestreaming.view.AllRoundImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+             />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/xxh_dp_12"
+            android:background="@drawable/start_time_bg"
+            android:drawableStart="@mipmap/activity_time"
+            android:drawablePadding="@dimen/xxh_dp_5"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/xxh_dp_15"
+            android:paddingTop="@dimen/xxh_dp_6"
+            android:paddingEnd="@dimen/xxh_dp_15"
+            android:paddingBottom="@dimen/xxh_dp_6"
+            android:text="2021-2-1至2021-2-28"
+            android:textColor="#ff5d534b"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_top_left"
+            android:layout_width="@dimen/xxh_dp_36"
+            android:background="@mipmap/activity_hot"
+            android:layout_height="@dimen/xxh_dp_36"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

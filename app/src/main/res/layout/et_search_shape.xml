@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edit_search_back"
+        android:drawableEnd="@mipmap/home_search"
+        android:drawablePadding="@dimen/xxh_dp_5"
+        android:focusable="true"
+        android:gravity="center|start"
+        android:hint="@string/search_interesting_content"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLength="8"
+        android:maxLines="1"
+        android:paddingStart="@dimen/xxh_sp_11"
+        android:paddingEnd="@dimen/xxh_dp_10"
+        android:textColor="@color/colorNotChoice"
+        android:textSize="@dimen/xxh_sp_14"
+        tools:ignore="RtlSymmetry" />
+
+    <View
+        android:id="@+id/click_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toStartOf="@id/click_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/click_search"
+        android:layout_width="@dimen/xxh_dp_50"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/et_search"
+        app:layout_constraintEnd_toEndOf="@id/et_search"
+        app:layout_constraintTop_toTopOf="@id/et_search" />
+</androidx.constraintlayout.widget.ConstraintLayout>

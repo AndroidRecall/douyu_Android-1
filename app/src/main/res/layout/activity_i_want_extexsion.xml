@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/extension_bg">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv1"
+                android:layout_width="0dp"
+                android:layout_height="235dp"
+                android:layout_marginStart="@dimen/xxh_dp_70"
+                android:layout_marginTop="440dp"
+                android:layout_marginEnd="@dimen/xxh_dp_70"
+                android:scaleType="fitXY"
+                android:src="@mipmap/extension_code_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_er_code"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/xxh_dp_15"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@id/iv1"
+                app:layout_constraintEnd_toEndOf="@id/iv1"
+                app:layout_constraintStart_toStartOf="@id/iv1"
+                app:layout_constraintTop_toTopOf="@id/iv1" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxh_dp_10"
+                android:text="@string/scan_qr"
+                android:textColor="#ff616463"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv1" />
+
+            <TextView
+                android:id="@+id/tv_invite_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxh_dp_14"
+                android:background="@drawable/drawble_btn_bg"
+                android:paddingStart="@dimen/xxh_dp_10"
+                android:paddingTop="@dimen/xxh_dp_5"
+                android:paddingEnd="@dimen/xxh_dp_10"
+                android:paddingBottom="@dimen/xxh_dp_5"
+                android:text="邀请码 PGUHDRT"
+                android:textColor="#ffffffff"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/xxh_dp_45"
+                android:layout_marginEnd="@dimen/xxh_dp_45"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_invite_code">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_save_er_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxh_dp_50"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/extension_download"
+                    android:drawablePadding="@dimen/xxh_dp_25"
+                    android:gravity="center_horizontal"
+                    android:text="保存二维码"
+                    android:textColor="#ff706973"
+                    android:textSize="19sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_copy_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxh_dp_50"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/extension_link"
+                    android:drawablePadding="@dimen/xxh_dp_25"
+                    android:gravity="center_horizontal"
+                    android:text="复制推广链接"
+                    android:textColor="#ff706973"
+                    android:textSize="19sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxh_dp_55"
+                android:background="@mipmap/extension_low"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_0" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/xxh_dp_20"
+                android:layout_marginTop="@dimen/xxh_dp_20"
+                android:layout_marginEnd="@dimen/xxh_dp_20"
+                android:background="@drawable/low_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ll2"
+                    android:layout_width="match_parent"
+                    android:layout_height="42sp"
+                    android:background="@drawable/extension_bg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="用户名"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="手机号"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="注册时间"
+                            android:textColor="#ffffffff"
+                            android:textSize="14sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/xxh_dp_200"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll2">
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <TextView
+                    android:id="@+id/tv_no_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxh_dp_20"
+                    android:drawableTop="@mipmap/extension_no"
+                    android:drawablePadding="@dimen/xxh_dp_5"
+                    android:gravity="center_horizontal"
+                    android:text="暂无下级"
+                    android:textColor="#ffedc6d2"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cl_bg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/xxh_dp_24"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/title_bar_simple" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

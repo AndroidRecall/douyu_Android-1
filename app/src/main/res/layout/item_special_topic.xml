@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_15"
+        android:layout_marginTop="@dimen/xxh_dp_20"
+        android:layout_marginEnd="@dimen/xxh_dp_15"
+        android:text="推荐"
+        android:textColor="#ff070809"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_15"
+        android:layout_marginTop="@dimen/xxh_dp_5"
+        android:layout_marginEnd="@dimen/xxh_dp_15"
+        android:lineSpacingMultiplier="1.3"
+        android:text="全中文点评、解说、精彩内容不再错过，老司机的进阶之路由此展开！"
+        android:textColor="#666869"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <com.swbg.mlivestreaming.view.AllRoundImageView
+        android:id="@+id/iv_video_face"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/xxh_dp_180"
+        android:layout_marginStart="@dimen/xxh_dp_15"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        android:layout_marginEnd="@dimen/xxh_dp_15"
+        android:layout_marginBottom="@dimen/xxh_dp_20"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_detail" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_video_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_video_back"
+        android:drawableStart="@mipmap/home_video_small"
+        android:drawablePadding="@dimen/xxh_dp_5"
+        android:gravity="center"
+        android:paddingStart="@dimen/xxh_dp_3"
+        android:paddingTop="@dimen/xxh_dp_2"
+        android:paddingEnd="@dimen/xxh_dp_3"
+        android:paddingBottom="@dimen/xxh_dp_2"
+        android:text="部"
+        android:textColor="@color/white"
+
+        android:textSize="@dimen/xxh_sp_11"
+        app:layout_constraintEnd_toEndOf="@id/iv_video_face"
+        app:layout_constraintTop_toTopOf="@id/iv_video_face" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/player_type_shape_bg"
+        android:gravity="center"
+        android:paddingStart="@dimen/xxh_dp_5"
+        android:layout_marginStart="@dimen/xxh_dp_5"
+        android:paddingTop="@dimen/xxh_dp_2"
+        android:paddingEnd="@dimen/xxh_dp_5"
+        android:paddingBottom="@dimen/xxh_dp_2"
+        android:text="动漫"
+        android:textColor="#ff46a8ea"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

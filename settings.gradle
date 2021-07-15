@@ -1,0 +1,6 @@
+include ':beautysettingkit'
+include ':keyboard'
+include ':keyboard'
+include ':reactivehttp'
+rootProject.name='MliveStreaming'
+include ':app'

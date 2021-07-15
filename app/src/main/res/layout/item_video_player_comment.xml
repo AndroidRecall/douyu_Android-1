@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_comment">
+
+    <com.swbg.mlivestreaming.view.AllRoundImageView
+        android:id="@+id/iv_comment_avatar"
+        app:imageCorn="@dimen/xxh_dp_18"
+        android:layout_width="@dimen/xxh_dp_36"
+        android:layout_height="@dimen/xxh_dp_36"
+        android:layout_marginStart="@dimen/xxh_dp_14"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/default_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_8"
+        tools:text="轻轻9897"
+        android:textColor="@color/colorCharacterBlack"
+        android:textSize="@dimen/xxh_sp_14"
+        app:layout_constraintBottom_toBottomOf="@id/iv_comment_avatar"
+        app:layout_constraintStart_toEndOf="@id/iv_comment_avatar"
+        app:layout_constraintTop_toTopOf="@id/iv_comment_avatar" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_gender"
+        android:layout_width="@dimen/xxh_dp_16"
+        android:layout_height="@dimen/xxh_dp_16"
+        android:layout_marginStart="@dimen/xxh_dp_5"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/player_man"
+        app:layout_constraintBottom_toBottomOf="@id/iv_comment_avatar"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        app:layout_constraintTop_toTopOf="@id/iv_comment_avatar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_14"
+        android:layout_marginEnd="@dimen/xxh_dp_14"
+        android:layout_marginTop="@dimen/xxh_dp_13"
+        android:text="评论内容"
+        android:textColor="@color/colorCharacterBlack"
+        android:textSize="@dimen/xxh_sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_comment_avatar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_comment_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_14"
+        android:layout_marginTop="@dimen/xxh_dp_22"
+        android:text="2020-02-12 16:18:47"
+        android:textColor="#ffa0a0a2"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_click_like_num_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/xxh_dp_14"
+        android:drawableStart="@mipmap/player_click_like_small"
+        android:drawablePadding="@dimen/xxh_dp_6"
+        android:text="66"
+
+        android:textColor="#ffa0a0a2"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_comment_time"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_comment_num_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/xxh_dp_18"
+        android:visibility="invisible"
+        android:drawableStart="@mipmap/player_chat"
+        android:drawablePadding="@dimen/xxh_dp_6"
+        android:text="66"
+        android:textColor="#ffa0a0a2"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_comment_time"
+        app:layout_constraintEnd_toStartOf="@id/tv_click_like_num_small" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="@dimen/xxh_dp_14"
+        android:layout_marginTop="@dimen/xxh_dp_18"
+        android:layout_marginEnd="@dimen/xxh_dp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_comment_time" />
+</androidx.constraintlayout.widget.ConstraintLayout>

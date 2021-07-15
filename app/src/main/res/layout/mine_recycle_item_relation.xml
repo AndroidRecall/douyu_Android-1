@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/xxh_dp_40"
+        android:layout_height="@dimen/xxh_dp_40"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        android:layout_marginBottom="@dimen/xxh_dp_10"
+        android:layout_marginStart="@dimen/xxh_dp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_6"
+        android:text="客服"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/xxh_sp_12"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+        app:layout_constraintTop_toTopOf="@+id/iv_avatar" />
+
+    <TextView
+        android:id="@+id/tv_people_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_6"
+        android:layout_marginTop="@dimen/xxh_dp_4"
+        android:drawableStart="@mipmap/icon_pepole_num"
+        android:drawablePadding="@dimen/xxh_dp_4"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:textSize="@dimen/xxh_sp_8"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_post_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_10"
+        android:layout_marginTop="@dimen/xxh_dp_4"
+        android:drawableStart="@mipmap/icon_posts_num"
+        android:drawablePadding="@dimen/xxh_dp_4"
+        android:gravity="center_vertical"
+        android:text="0"
+        android:textSize="@dimen/xxh_sp_8"
+        app:layout_constraintStart_toEndOf="@+id/tv_people_num"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/xxh_dp_10"
+        android:background="@drawable/btn_join_circle_bg1">
+        <TextView
+            android:id="@+id/tv_follow_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注"
+            android:gravity="center"
+            android:drawableStart="@mipmap/ic_post_views"
+            android:drawableTint="@color/colorBtnBlue"
+            android:textColor="@color/colorBtnBlue"
+            android:layout_marginEnd="@dimen/xxh_dp_10"
+            android:layout_marginStart="@dimen/xxh_dp_10"
+            android:drawablePadding="@dimen/xxh_dp_1"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="@dimen/xxh_dp_4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

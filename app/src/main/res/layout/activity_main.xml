@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@mipmap/main_bg"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/home_rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include layout="@layout/main_title_bar" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/ll_bottom_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_title_bar" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_bottom_bar"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_tab0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxh_dp_8"
+                android:src="@mipmap/home_video"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            home_bottom_bar_bg-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxh_dp_5"
+                android:background="@drawable/home_bottom_bar_bg"
+                android:paddingStart="@dimen/xxh_dp_5"
+                android:paddingTop="@dimen/xxh_dp_2"
+                android:paddingEnd="@dimen/xxh_dp_5"
+                android:paddingBottom="@dimen/xxh_dp_2"
+                android:text="@string/video"
+                android:textColor="@color/colorTxtBlue"
+                android:textSize="@dimen/xxh_sp_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_tab1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/xxh_dp_18"
+                android:layout_marginTop="@dimen/xxh_dp_8"
+                android:src="@mipmap/home_activity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxh_dp_5"
+                android:background="@drawable/home_bottom_bar_bg"
+                android:paddingStart="@dimen/xxh_dp_5"
+                android:paddingTop="@dimen/xxh_dp_2"
+                android:paddingEnd="@dimen/xxh_dp_5"
+                android:paddingBottom="@dimen/xxh_dp_2"
+                android:text="@string/anchor"
+                android:textColor="@color/colorTxtBlue"
+                android:textSize="@dimen/xxh_sp_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_tab2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_game_header"
+                android:layout_width="@dimen/xxh_dp_60"
+                android:layout_height="@dimen/xxh_dp_60"
+                android:src="@mipmap/ic_game_tab_header"
+                android:layout_marginBottom="@dimen/xxh_dp_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/tv_game_title" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv2"
+                android:layout_width="@dimen/xxh_dp_60"
+                android:layout_height="@dimen/xxh_dp_60"
+                android:src="@mipmap/ic_game_tab_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/tv_game_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_game_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/xxh_dp_3"
+                android:background="@drawable/home_bottom_bar_bg"
+                android:paddingStart="@dimen/xxh_dp_5"
+                android:paddingTop="@dimen/xxh_dp_2"
+                android:paddingEnd="@dimen/xxh_dp_5"
+                android:paddingBottom="@dimen/xxh_dp_2"
+                android:text="@string/game"
+                android:textColor="@color/colorTxtBlue"
+                android:textSize="@dimen/xxh_sp_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_tab3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_click_immediately"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/xxh_dp_18"
+                android:layout_marginTop="@dimen/xxh_dp_8"
+                android:src="@mipmap/ic_tab_plazz_n"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxh_dp_5"
+                android:background="@drawable/home_bottom_bar_bg"
+                android:paddingStart="@dimen/xxh_dp_5"
+                android:paddingTop="@dimen/xxh_dp_2"
+                android:paddingEnd="@dimen/xxh_dp_5"
+                android:paddingBottom="@dimen/xxh_dp_2"
+                android:text="@string/square"
+                android:textColor="@color/colorTxtBlue"
+                android:textSize="@dimen/xxh_sp_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_click_immediately" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bottom_tab4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxh_dp_8"
+                android:src="@mipmap/mine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--            home_bottom_bar_bg-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xxh_dp_5"
+                android:background="@drawable/home_bottom_bar_bg"
+                android:paddingStart="@dimen/xxh_dp_5"
+                android:paddingTop="@dimen/xxh_dp_2"
+                android:paddingEnd="@dimen/xxh_dp_5"
+                android:paddingBottom="@dimen/xxh_dp_2"
+                android:text="@string/mine"
+                android:textColor="@color/colorTxtBlue"
+                android:textSize="@dimen/xxh_sp_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

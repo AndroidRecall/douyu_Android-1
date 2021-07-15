@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_white_radius_top_c20"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="@dimen/xxh_dp_50"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/cl_bottom"
+        app:layout_constraintTop_toBottomOf="@+id/indicator"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-63dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/xxh_dp_60"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/tv_joy_beans"
+            android:layout_width="@dimen/xxh_dp_80"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorBtnBlue"
+            android:textSize="@dimen/xxh_sp_12"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_week_tab"
+            android:text="@string/balance_1"/>
+        <TextView
+            android:id="@+id/tv_joy_beans_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_joy_beans"
+            android:textColor="@color/black"
+            android:textSize="@dimen/xxh_sp_12"
+            android:gravity="end"
+            android:layout_marginStart="@dimen/xxh_dp_10"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_joy_beans"
+            app:layout_constraintStart_toEndOf="@+id/tv_joy_beans"
+            android:text="10"/>
+        <TextView
+            android:id="@+id/tv_wallet"
+            android:layout_width="@dimen/xxh_dp_80"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tv_joy_beans"
+            android:textColor="@color/colorBtnBlue"
+            android:textSize="@dimen/xxh_sp_12"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/wallet2"/>
+        <TextView
+            android:id="@+id/tv_wallet_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/tv_wallet"
+            android:textColor="@color/black"
+            android:textSize="@dimen/xxh_sp_12"
+            android:gravity="end"
+            android:layout_marginStart="@dimen/xxh_dp_10"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_wallet"
+            app:layout_constraintStart_toEndOf="@+id/tv_wallet"
+            android:text="10"/>
+        <TextView
+            android:id="@+id/tv_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:textSize="@dimen/xxh_sp_14"
+            android:gravity="center"
+            android:background="@mipmap/bg_recharge_gift"
+            android:layout_marginStart="@dimen/xxh_dp_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/xxh_dp_10"
+            android:text="充值"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

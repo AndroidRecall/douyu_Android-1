@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--阴影-->
+    <item
+        android:left="2dp"
+        android:top="2dp"
+        android:right="2dp"
+        android:bottom="2dp"
+        >
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="-180"
+                android:endColor="@color/gradient_end"
+                android:startColor="@color/gradient_start"
+                android:type="linear" />
+                android:type="linear"
+                />
+
+            <corners
+               android:radius="@dimen/xxh_dp_30"/>
+        </shape>
+    </item>
+    <!--阴影-->
+</layer-list>

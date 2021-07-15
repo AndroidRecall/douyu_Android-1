@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.swbg.mlivestreaming.view.CustomJzvd
+        android:id="@+id/jz_player"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="210dp"/>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/cl_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jz_player"
+        android:layout_height="0dp">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff2f3f4"
+            />
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:maxHeight="@dimen/xxh_dp_100"
+        android:minHeight="@dimen/xxh_dp_50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xxh_dp_14"
+            android:src="@mipmap/player_share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_collect_b"
+            android:layout_width="@dimen/xxh_dp_20"
+            android:layout_height="@dimen/xxh_dp_20"
+            android:layout_marginEnd="@dimen/xxh_dp_14"
+            android:scaleType="fitXY"
+            android:src="@mipmap/player_collection_me"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_share"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_click_like_b"
+            android:layout_width="@dimen/xxh_dp_18"
+            android:layout_height="@dimen/xxh_dp_18"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="@dimen/xxh_dp_14"
+            android:src="@mipmap/player_click_evaluate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_collect_b"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xxh_dp_14"
+            android:src="@mipmap/player_chat_comment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_click_like_b"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_comment_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_14"
+            android:layout_marginTop="@dimen/xxh_dp_10"
+            android:layout_marginEnd="@dimen/xxh_dp_20"
+            android:layout_marginBottom="@dimen/xxh_dp_10"
+            android:background="@drawable/input_bg"
+            android:focusable="false"
+            android:hint="我也来说几句"
+            android:maxHeight="@dimen/xxh_dp_80"
+            android:paddingStart="@dimen/xxh_dp_14"
+            android:paddingTop="@dimen/xxh_dp_10"
+            android:paddingEnd="@dimen/xxh_dp_14"
+            android:paddingBottom="@dimen/xxh_dp_10"
+            android:textColor="@color/colorCharacterBlack"
+            android:textColorHint="#ff98999a"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_comment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <cn.hadcn.keyboard.ChatKeyboardLayout
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

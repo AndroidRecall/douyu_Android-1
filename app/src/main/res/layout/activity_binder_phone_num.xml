@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_bar_simple" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_1"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_18"
+            android:layout_marginTop="@dimen/xxh_dp_15"
+            android:text="手机号"
+            android:textColor="#ff282929"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_phone_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_18"
+            android:layout_marginTop="@dimen/xxh_dp_10"
+            android:background="@null"
+            android:hint="请输入11位手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="#ff959797"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/xxh_dp_18"
+            android:layout_marginTop="@dimen/xxh_dp_15"
+            android:background="#EEEEEE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_phone_num"
+            app:layout_goneMarginStart="@dimen/xxh_dp_18" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_18"
+            android:layout_marginTop="@dimen/xxh_dp_30"
+            android:text="请输入获取验证码"
+            android:textColor="#ff282929"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_phone_num" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_identify_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_18"
+            android:layout_marginTop="@dimen/xxh_dp_10"
+            android:background="@null"
+            android:hint="请输入获取验证码"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textColor="#ff959797"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/xxh_dp_18"
+            android:layout_marginTop="@dimen/xxh_dp_15"
+            android:background="#EEEEEE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_identify_code"
+            app:layout_goneMarginStart="@dimen/xxh_dp_18" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_get_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xxh_dp_10"
+            android:background="@mipmap/get_verify_code_bg"
+            android:gravity="center"
+            android:paddingStart="@dimen/xxh_dp_10"
+            android:paddingTop="@dimen/xxh_dp_5"
+            android:paddingEnd="@dimen/xxh_dp_10"
+            android:paddingBottom="@dimen/xxh_dp_5"
+            android:text="@string/get_verify_code"
+            android:textColor="@color/colorAccentBlur"
+            android:textSize="@dimen/xxh_sp_14"
+            app:layout_constraintBottom_toBottomOf="@id/et_identify_code"
+            app:layout_constraintEnd_toEndOf="@id/et_identify_code"
+            app:layout_constraintTop_toTopOf="@id/et_identify_code" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/cl0">-->
+
+<!--        <include layout="@layout/item_confirm_button" />-->
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/xxh_dp_50"
+        android:layout_marginTop="@dimen/xxh_dp_25"
+        android:layout_marginStart="@dimen/xxh_dp_15"
+        android:layout_marginEnd="@dimen/xxh_dp_15"
+        android:background="@drawable/btn_confirm_blue_bg"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/xxh_sp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

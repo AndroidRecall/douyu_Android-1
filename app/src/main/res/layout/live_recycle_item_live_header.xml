@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.swbg.mlivestreaming.view.VerticalRecyclerView
+            android:id="@+id/recyclerLottery"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xxh_dp_100"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerLottery">
+
+            <com.swbg.mlivestreaming.view.MarqueeTextView
+                android:id="@+id/tv_notice"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/scroll_back"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingStart="@dimen/xxh_dp_5"
+                android:paddingEnd="@dimen/xxh_dp_5"
+                android:singleLine="true"
+                android:textColor="@color/colorF60F4B"
+                android:textSize="@dimen/xxh_sp_14"
+                app:layout_constraintBottom_toBottomOf="@id/iv_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_1"
+                app:layout_constraintTop_toTopOf="@id/iv_1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_1"
+                android:layout_width="@dimen/xxh_dp_50"
+                android:layout_height="@dimen/xxh_dp_40"
+                android:background="@drawable/recommended_back"
+                android:scaleType="center"
+                android:src="@mipmap/home_headline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_invite"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/xxh_dp_60"
+                    android:layout_margin="@dimen/xxh_dp_10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cl_notice"
+                    app:layout_constraintEnd_toStartOf="@+id/cv_recharge">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tv_invite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="免费睡妹子"
+                            android:textSize="@dimen/xxh_sp_12"
+                            android:drawableTop="@mipmap/icon_tx_tcyp"
+                            android:layout_marginStart="@dimen/xxh_dp_10"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:src="@mipmap/icon_tcyp"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_recharge"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/xxh_dp_60"
+                android:layout_marginStart="@dimen/xxh_dp_10"
+                android:layout_marginEnd="@dimen/xxh_dp_10"
+                app:layout_constraintStart_toEndOf="@+id/cv_invite"
+                app:layout_constraintTop_toTopOf="@+id/cv_invite"
+                app:layout_constraintBottom_toBottomOf="@+id/cv_invite"
+                app:layout_constraintEnd_toEndOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tv_yue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24小时在线"
+                        android:textSize="@dimen/xxh_sp_12"
+                        android:drawableTop="@mipmap/ic_tx_user_recharg"
+                        android:layout_marginStart="@dimen/xxh_dp_10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:src="@mipmap/ic_home_recharge"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_live_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在热映"
+            android:textSize="@dimen/xxh_dp_16"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="@dimen/xxh_dp_10"
+            android:layout_marginTop="@dimen/xxh_dp_10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_invite" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

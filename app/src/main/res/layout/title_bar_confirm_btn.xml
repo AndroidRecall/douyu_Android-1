@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/titleBar"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:animateLayoutChanges="true"
+    android:background="@android:color/white"
+    android:elevation="@dimen/item_card_elevation"
+    app:contentInsetEnd="0dp"
+    app:contentInsetStart="0dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/iftTitle"
+        style="@style/ToolBarCustomChild.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/iftActionRight"
+        style="@style/ToolBarCustomChild.Right" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/iftActionRightSub"
+        style="@style/ToolBarCustomChild.Right"
+        android:layout_height="@dimen/xxh_dp_25"
+        android:background="@drawable/title_bar_confirm_bg"
+        android:textColor="@color/colorCharacterGrayHint"
+        android:text="@string/confirm"
+        android:textSize="@dimen/xxh_sp_15"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/iftActionLeft"
+        style="@style/ToolBarCustomChild.Left"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ibReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/xxh_dp_15"
+        android:background="@null"
+        android:backgroundTint="@color/white"
+        android:src="@mipmap/return_back" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_service_center"
+        style="@style/ToolBarCustomChild.Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@mipmap/charge_service"
+        android:drawablePadding="@dimen/xxh_dp_5"
+        android:text="客服中心"
+        android:textColor="@color/colorCharacterBlack"
+        android:textSize="@dimen/xxh_sp_15"
+        android:paddingEnd="@dimen/xxh_dp_1"
+        android:paddingStart="@dimen/xxh_dp_1"
+        android:visibility="gone" />
+
+</androidx.appcompat.widget.Toolbar>

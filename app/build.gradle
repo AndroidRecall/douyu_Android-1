@@ -1,0 +1,259 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'walle'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+
+    defaultConfig {
+        applicationId "com.swbg.mlivestreaming"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+        }
+
+        productFlavors {
+            mlFlavors {
+                versionCode 2000001
+                versionName "2.0.1"
+            }
+            dyFlavors {
+                versionCode 2000001
+                versionName "2.0.1"
+            }
+        }
+    }
+
+
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'livestreaming'
+            storeFile file('livingKey.jks')
+            storePassword 'livestreaming'
+        }
+        mlRelease {
+            keyAlias 'key0'
+            keyPassword 'livestreaming'
+            storeFile file('livingKey.jks')
+            storePassword 'livestreaming'
+        }
+        dyRelease {
+            keyAlias 'key0'
+            keyPassword 'livestreaming'
+            storeFile file('livingKey.jks')
+            storePassword 'livestreaming'
+        }
+    }
+    flavorDimensions "default"
+    productFlavors {
+        mlFlavors {
+            resValue "string", "app_name", "斗娱"
+            buildConfigField("String", "SERVER_URL", "\"http://vip.wutagongshui.net/\"")
+
+            buildConfigField("String", "IMAGE_BASE_URL", "\"http://vip.wutagongshui.net/storage/\"")
+            buildConfigField("String", "APP_NAME_", "\"斗娱\"")
+            buildConfigField("String", "APP_BLANCE_NAME", "\"欢乐豆\"")
+        }
+        dyFlavors {
+            resValue "string", "app_name", "斗娱"
+            buildConfigField("String", "SERVER_URL", "\"http://47.57.165.91:188\"")
+            buildConfigField("String", "IMAGE_BASE_URL", "\"http://180.215.218.130:188/\"")
+            buildConfigField("String", "APP_NAME_", "\"斗娱\"")
+            buildConfigField("String", "APP_BLANCE_NAME", "\"欢乐豆\"")
+        }
+    }
+    buildTypes {
+        /*    walle {
+                // 指定渠道包的输出路径
+                apkOutputFolder = new File("${project.buildDir}/outputs/channels");
+                // 定制渠道包的APK的文件名称
+                apkFileNameFormat = '${appName}-${packageName}-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk';
+                // 渠道配置文件
+                channelFile = new File("${project.getProjectDir()}/channel")
+            }*/
+        release {
+//            minifyEnabled true
+//            zipAlignEnabled true
+//            shrinkResources true
+            renderscriptDebuggable true
+            aaptOptions.cruncherEnabled = false
+            multiDexKeepProguard file('multidex_keep.pro')
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+
+//            buildConfigField("String", "SERVER_URL", "\"http://apimile2.xxxpay.cc\"")
+//            buildConfigField("String", "STANDARD_URL", "\"http://440046.cn:88.apk\"")
+//            buildConfigField("String", "IMAGE_BASE_URL", "\"http://apimile2.xxxpay.cc/storage/\"")
+
+            buildConfigField("String", "WEB_URL", "\"http://440046.cn:88\"")
+            buildConfigField("boolean", "LOG_ENABLE", "false")
+            buildConfigField("String", "CLIENT_SECRET", "\"Z11IzOPZO7kJlVksgrVIJwUqzEFM8VcaixCUYCwr0AkbFWFPABBRMb4Q2Y2bJFzr\"")
+            buildConfigField("String", "CLIENT_ID", "\"CffdRJvw4xwprj2CR4ILrB29irC30m+hCAXpOdujZgo=\"")
+            buildConfigField("String", "GRANT_TYPE", "\"password\"")
+            buildConfigField("String", "CHANNEL_ID", "\"5\"")
+            buildConfigField("String", "BUGLY_APP_ID", "\"9bac5cb3a6\"")
+            buildConfigField("String", "BUILD_INFO", "\"\"")
+            manifestPlaceholders = [UMENG_APPKEY: "593df30d2ae85b639c002530"]
+            matchingFallbacks = ['release', 'debug']
+
+            applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def createTime = new Date().format("YYYY-MM-dd", TimeZone.getTimeZone("GMT+08:00"))
+                        // app包名称-app_3.0.3_2020-05-13_release.apk
+                        outputFileName = "app_" + variant.productFlavors[0].name.replace("Flavors", "").replace("NoIcon", "") + "_" + variant.productFlavors[0].versionName + "_" + createTime + "_" + buildType.name + ".apk"
+                    }
+                }
+            }
+        }
+
+        debug {
+            signingConfig signingConfigs.config
+
+            renderscriptDebuggable false
+            /*测试环境start*/
+//            buildConfigField("String", "SERVER_URL", "\"http://mileapi2.xxxpay.cc\"")
+//            buildConfigField("String", "STANDARD_URL", "\"http://440046.cn:88.apk\"")
+//            buildConfigField("String", "IMAGE_BASE_URL", "\"http://mileapi2.xxxpay.cc/storage/\"")
+
+            buildConfigField("String", "SERVER_URL", "\"http://vip.wutagongshui.net/\"")
+            buildConfigField("String", "STANDARD_URL", "\"http://440046.cn:88.apk\"")
+            buildConfigField("String", "IMAGE_BASE_URL", "\"http://vip.wutagongshui.net/storage/\"")
+
+            /*测试环境end*/
+//            buildConfigField("String", "STANDARD_URL", "\"http://api.mile1.vip.apk\"")
+            buildConfigField("String", "WEB_URL", "\"http://440046.cn:88\"")
+
+            buildConfigField("boolean", "LOG_ENABLE", "true")
+            buildConfigField("String", "CLIENT_SECRET", "\"Z11IzOPZO7kJlVksgrVIJwUqzEFM8VcaixCUYCwr0AkbFWFPABBRMb4Q2Y2bJFzr\"")
+            buildConfigField("String", "CLIENT_ID", "\"CffdRJvw4xwprj2CR4ILrB29irC30m+hCAXpOdujZgo=\"")
+            buildConfigField("String", "GRANT_TYPE", "\"password\"")
+            buildConfigField("String", "BUGLY_APP_ID", "\"e011705e5b\"")
+            buildConfigField("String", "CHANNEL_ID", "\"5\"")
+            buildConfigField("String", "BUILD_INFO", "\"-debug_${new Date().format("yyyy-MM-dd hh-mm")}\"")
+
+            manifestPlaceholders = [UMENG_APPKEY: "59bf3ca9a40fa3556c000014"]
+            matchingFallbacks = ['release', 'debug']
+        }
+    }
+
+    packagingOptions {
+        pickFirst '**/libc++_shared.so'
+        doNotStrip "*/armeabi/libYTCommon.so"
+        doNotStrip "*/armeabi-v7a/libYTCommon.so"
+        doNotStrip "*/x86/libYTCommon.so"
+        doNotStrip "*/arm64-v8a/libYTCommon.so"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["core-ktx"]
+    implementation rootProject.ext.dependencies["material"]
+    implementation rootProject.ext.dependencies["constraintlayout"]
+    implementation rootProject.ext.dependencies["navigation-fragment"]
+    implementation rootProject.ext.dependencies["navigation-ui"]
+    implementation rootProject.ext.dependencies["lifecycle-extensions"]
+    implementation rootProject.ext.dependencies["navigation-fragment-ktx"]
+    implementation rootProject.ext.dependencies["navigation-ui-ktx"]
+    implementation rootProject.ext.dependencies["logging-interceptor"]
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation files('libs\\tbs_sdk_thirdapp_v4.3.0.93_43993_sharewithdownloadwithfile_withoutGame_obfs_20210220_114728.jar')
+
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["ext_junit"]
+    androidTestImplementation rootProject.ext.dependencies["espresso-core"]
+
+    //rx
+    implementation rootProject.ext.dependencies["rxjava2"]
+    implementation(rootProject.ext.dependencies["rxandroid2"]) {
+        exclude module: 'rxjava'
+    }
+    //network
+    implementation rootProject.ext.dependencies["okhttp3"]
+    implementation(rootProject.ext.dependencies["retrofit"]) {
+        exclude module: 'okhttp'
+    }
+    implementation rootProject.ext.dependencies["retrofit-converter-gson"]
+    implementation(rootProject.ext.dependencies["retrofit-adapter-rxjava2"]) {
+        exclude module: 'rxjava'
+    }
+
+    implementation("com.github.bumptech.glide:glide:4.11.0") {
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.11.0'
+    //banner
+    implementation 'com.youth.banner:banner:2.1.0'
+
+    //video player
+    implementation 'cn.jzvd:jiaozivideoplayer:7.6.0'
+
+    //okHttp+viewModel
+    implementation project(path: ':reactivehttp')
+
+    //refresh
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.3'      //核心必须依赖
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.3'    //经典刷新头
+
+    //bugly
+    implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
+//    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    implementation 'com.yanzhenjie:permission:2.0.3'
+
+    //M3U8视频下载
+    implementation 'com.jwkj:M3U8Manger:v2.3.0'
+
+    //float
+    implementation 'com.github.princekin-f:EasyFloat:1.3.4'
+    //walle
+    implementation 'com.meituan.android.walle:library:1.1.7'
+
+    implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
+    //表情键盘
+    implementation project(path: ':keyboard')
+    //腾讯美颜组件
+    implementation project(path: ':beautysettingkit')
+
+    /*
+     * 工具类
+     */
+    implementation 'com.blankj:utilcodex:1.30.5'
+
+    //图片选择器
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.6'
+    //腾讯直播sdk
+    implementation(name: 'LiteAVSDK_Smart_8.6.10097', ext: 'aar')
+    //腾讯IM
+    implementation(name: 'imsdk-smart-5.3.435', ext: 'aar')
+    //弹幕
+    implementation 'com.github.ctiao:DanmakuFlameMaster:0.9.25'
+    //弹窗
+    implementation 'com.github.li-xiaojun:XPopup:2.4.6'
+
+    //如果要用把jzvideo的核心播放器换成ijk的，就就留着，不用可以删除，顺便把.so库删了，能让app体积减少10M
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.4'
+
+    implementation 'io.alterac.blurkit:blurkit:1.1.1'
+}

@@ -1,0 +1,134 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorMiddleGray</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorWindowBackground</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowSwipeToDismiss">true</item>
+        <item name="android:alertDialogTheme">@style/Dialog_Global</item>
+    </style>
+    <style name="Dialog_Global" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/shape_white_radius</item>
+        <item name="windowFixedWidthMinor">85%</item>
+        <item name="windowFixedWidthMajor">85%</item>
+    </style>
+    <style name="Dialog_Global_TRANSPORT" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@color/color00000000</item>
+        <item name="windowFixedWidthMinor">85%</item>
+        <item name="windowFixedWidthMajor">85%</item>
+    </style>
+    <!-- 图片全屏-->
+    <style name="AppTheme.imgFullScreen">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/RightSlideAnimation</item>
+    </style>
+
+    <style name="RightSlideAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+        <item name="android:fragmentOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:fragmentOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:fragmentCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:fragmentCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <style name="FadeInAnimation">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+        <item name="android:fragmentOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:fragmentOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:fragmentCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:fragmentCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="FullScreenTransparent" parent="AppTheme.FullScreen">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="AppTheme.FullScreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!--imageView-->
+    <declare-styleable name="CircleImageView">
+        <attr name="imageCorn" format="dimension" />
+    </declare-styleable>
+
+    <style name="popuwin_anim_right" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popuwin_fade_right_in</item>
+        <item name="android:windowExitAnimation">@anim/popuwin_fade_right_out</item>
+    </style>
+
+    <style name="popuwin_anim_left" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popuwin_fade_left_in</item>
+        <item name="android:windowExitAnimation">@anim/popuwin_fade_left_out</item>
+    </style>
+    <style name="AppTheme.FullScreen.Guide">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="TransparentBottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/SheetStyle</item>
+    </style>
+
+    <style name="SheetStyle" parent="android:Widget">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="behavior_peekHeight">auto</item>
+        <item name="behavior_hideable">true</item>
+        <item name="behavior_skipCollapsed">false</item>
+    </style>
+    <!-- dialog从ios效果动画 -->
+    <style name="BottomShowAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/enter_bottom_menu</item>
+        <item name="android:windowExitAnimation">@anim/exit_bottom_menu</item>
+
+    </style>
+    <style name="main_menu_animstyle" parent="BottomShowAnimation"></style>
+    <!-- 中间弹出框 -->
+    <style name="dialog_center" parent="Theme.AppCompat.Dialog.Alert">
+        <!-- 去黑边 -->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:screenOrientation">portrait</item>
+        <!-- 设置是否可滑动 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 背景 -->
+        <!-- 窗口背景 @color/touming的值为：#00000000 ， style中不能直接引用16进制，感谢评论区的老铁提醒-->
+
+        <item name="android:windowBackground">@color/transparent</item>
+
+        <!-- 是否变暗 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 点击空白部分activity不消失 -->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+    //valuse
+    <style name="TranslucentTheme" parent="AppTheme">
+    </style>
+
+    <style name="style_16sp_yellow">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/live_yellow_gift_txt</item>
+    </style>
+    <style name="floag_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color00000000">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/iv_cancel_some"
+        android:layout_width="@dimen/xxh_dp_30"
+        android:layout_height="@dimen/xxh_dp_30"
+        android:background="@color/color00000000"
+        android:clickable="false"
+        android:layout_marginEnd="@dimen/xxh_dp_15"
+        android:focusable="false"
+        android:src="@mipmap/transfer_dialog_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/v_click_close"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xxh_dp_50"
+        android:background="@color/color00000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_20"
+        android:background="@drawable/watch_num_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_cancel_some">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxh_dp_24"
+            android:text="您还有观影次数"
+            android:textColor="#ff1d1e1f"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_22"
+            android:layout_marginTop="37dp"
+            android:text="购买VIP畅享观影"
+            android:textColor="#ff1d1e1f"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+
+        <View
+            android:id="@+id/v_click_btn_1"
+            android:layout_width="@dimen/xxh_dp_100"
+            android:layout_height="@dimen/xxh_dp_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_btn_1" />
+
+        <TextView
+            android:id="@+id/tv_btn_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xxh_dp_14"
+            android:background="@drawable/drawable_btn_bg"
+            android:paddingStart="@dimen/xxh_dp_11"
+            android:paddingTop="2.5dp"
+            android:paddingEnd="@dimen/xxh_dp_11"
+            android:paddingBottom="2.5dp"
+            android:text="去购买"
+            android:textColor="#ff24a8fe"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/xxh_dp_16"
+            android:background="#E7EBEC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_btn_1" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_22"
+            android:layout_marginTop="37dp"
+            android:text="推广分享获取次数"
+            android:textColor="#ff1d1e1f"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+        <View
+            android:id="@+id/v_click_btn_2"
+            android:layout_width="@dimen/xxh_dp_100"
+            android:layout_height="@dimen/xxh_dp_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_btn_2" />
+
+        <TextView
+            android:id="@+id/tv_btn_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xxh_dp_14"
+            android:background="@drawable/drawable_btn_bg"
+            android:paddingStart="@dimen/xxh_dp_11"
+            android:paddingTop="2.5dp"
+            android:paddingEnd="@dimen/xxh_dp_11"
+            android:paddingBottom="2.5dp"
+            android:text="去推广"
+            android:textColor="#ff24a8fe"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/xxh_dp_16"
+            android:background="#E7EBEC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_btn_2" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_22"
+            android:layout_marginTop="37dp"
+            android:text="充值免费赠送高清次数"
+            android:textColor="#ff1d1e1f"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+        <View
+            android:id="@+id/v_click_btn_3"
+            android:layout_width="@dimen/xxh_dp_100"
+            android:layout_height="@dimen/xxh_dp_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_btn_3" />
+
+        <TextView
+            android:id="@+id/tv_btn_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xxh_dp_14"
+            android:background="@drawable/drawable_btn_bg"
+            android:paddingStart="@dimen/xxh_dp_11"
+            android:paddingTop="2.5dp"
+            android:paddingEnd="@dimen/xxh_dp_11"
+            android:paddingBottom="2.5dp"
+            android:text="去充值"
+            android:textColor="#ff24a8fe"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/xxh_dp_16"
+            android:background="#E7EBEC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_btn_3" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_22"
+            android:layout_marginTop="37dp"
+            android:text="绑定手机号"
+            android:textColor="#ff1d1e1f"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv3" />
+
+
+        <View
+            android:id="@+id/v_click_btn_4"
+            android:layout_width="@dimen/xxh_dp_100"
+            android:layout_height="@dimen/xxh_dp_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_btn_4" />
+
+        <TextView
+            android:id="@+id/tv_btn_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xxh_dp_14"
+            android:background="@drawable/drawable_btn_bg"
+            android:paddingStart="@dimen/xxh_dp_11"
+            android:paddingTop="2.5dp"
+            android:paddingEnd="@dimen/xxh_dp_11"
+            android:paddingBottom="2.5dp"
+            android:text="去绑定"
+            android:textColor="#ff24a8fe"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/xxh_dp_10"
+            android:layout_marginTop="@dimen/xxh_dp_16"
+            android:layout_marginEnd="@dimen/xxh_dp_10"
+            android:background="#E7EBEC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_btn_4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

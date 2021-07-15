@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/cl_root"
+    android:layout_height="wrap_content">
+
+    <com.swbg.mlivestreaming.view.AllRoundImageView
+        android:id="@+id/iv_face"
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_5"
+        android:layout_marginBottom="@dimen/xxh_dp_5"
+        android:textColor="#ffffffff"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_face"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/xxh_dp_5"
+        android:layout_marginBottom="@dimen/xxh_dp_5"
+        android:textColor="#ffffffff"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_face"
+        app:layout_constraintEnd_toEndOf="@id/iv_face" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="阿九美美"
+        android:textColor="#ff070809"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/xxh_dp_8"
+        app:layout_constraintTop_toBottomOf="@id/iv_face" />
+    <TextView
+        android:id="@+id/tv_three"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/xxh_dp_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="三围：88-59-85"
+        android:textColor="#ff9f9fa2"
+        android:textSize="12sp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

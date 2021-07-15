@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/indication_bar">
+   <!--     <shape>
+            <corners android:radius="@dimen/xxh_dp_2"/>
+            <gradient android:angle="0" android:startColor="@color/colorIndicatorStart" android:endColor="@color/colorIndicatorEnd"/>
+        </shape>-->
+    </item>
+</selector>

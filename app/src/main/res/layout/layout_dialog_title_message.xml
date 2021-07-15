@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_radius_image"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="@dimen/xxh_dp_20"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:gravity="center_horizontal"
+        android:textColor="#1D1E1F"
+        android:textSize="17sp"
+        android:maxLines="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="文件已被删除" />
+
+
+
+    <TextView
+        android:id="@+id/txt_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4sp"
+        android:padding="@dimen/xxh_dp_20"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/v_center_h"
+        tools:text="该文件已被从案件文件中删除，无法继续使用" />
+
+    <View
+        android:id="@+id/v_center_h"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorC8LightGray"
+        app:layout_constraintBottom_toTopOf="@id/txt_negative" />
+
+    <View
+        android:id="@+id/v_center_line"
+        android:layout_width="0.5dp"
+        android:layout_height="@dimen/xxh_dp_48"
+        android:background="@color/colorC8LightGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/txt_negative"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="18dp"
+        android:textColor="@color/colorLightGray"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/txt_positive"
+        app:layout_constraintTop_toBottomOf="@+id/txt_message"
+        app:layout_goneMarginTop="22dp"
+        tools:text="取消关联" />
+
+    <TextView
+        android:id="@+id/txt_positive"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="18dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@+id/txt_negative"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_message"
+        tools:text="确定" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

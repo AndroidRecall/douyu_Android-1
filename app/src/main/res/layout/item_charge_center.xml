@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_17"
+        android:layout_marginTop="@dimen/xxh_dp_30"
+        android:text="支付渠道"
+        android:textColor="#ff1e2020"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pay_way"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_pay_channel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_17"
+        android:layout_marginTop="@dimen/xxh_dp_13"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_ll_1"
+            android:layout_width="@dimen/xxh_dp_80"
+            android:layout_height="@dimen/xxh_dp_70"
+            android:layout_marginEnd="@dimen/xxh_dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/charge_center_alipay" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_ll_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xxh_dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/charge_game" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_ll_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xxh_dp_8"
+            android:layout_weight="1"
+            android:background="@drawable/charge_alipay_internet" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_17"
+        android:layout_marginTop="@dimen/xxh_dp_30"
+        android:text="存款金额"
+        android:textColor="#ff1e2020"
+
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_pay_way" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_charge_money"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_5"
+        android:layout_marginEnd="@dimen/xxh_dp_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv2" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_alarm"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xxh_dp_60"
+        android:layout_marginStart="@dimen/xxh_dp_16"
+        android:layout_marginTop="@dimen/xxh_dp_20"
+        android:layout_marginEnd="@dimen/xxh_dp_16"
+        android:background="@drawable/charge_alarm_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_charge_money" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_13"
+        android:text="¥"
+        android:textColor="#fffb5e84"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_alarm"
+        app:layout_constraintStart_toStartOf="@id/tv_alarm"
+        app:layout_constraintTop_toTopOf="@id/tv_alarm" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_30"
+        android:background="@null"
+        android:hint="@string/charge_tip"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textColor="#fffb5e84"
+        android:textColorHint="#ff98999a"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_alarm"
+        app:layout_constraintStart_toStartOf="@id/tv_alarm"
+        app:layout_constraintTop_toTopOf="@id/tv_alarm" />
+
+    <TextView
+        android:id="@+id/tv10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_20"
+        android:text="填写姓名"
+        android:textColor="#ff1e2020"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tv_alarm"
+        app:layout_constraintTop_toBottomOf="@id/tv_alarm" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="@dimen/xxh_dp_20"
+        android:background="@drawable/charge_alarm_bg"
+        android:hint="请输入您的姓名"
+        android:maxLength="30"
+        android:maxLines="1"
+        android:paddingStart="@dimen/xxh_dp_13"
+        android:paddingEnd="@dimen/xxh_dp_13"
+        android:textColor="#ff1e2020"
+        android:textColorHint="#ff98999a"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_alarm"
+        app:layout_constraintStart_toStartOf="@id/tv_alarm"
+        app:layout_constraintTop_toBottomOf="@id/tv10" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_confirm_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_16"
+        android:layout_marginTop="@dimen/xxh_dp_40"
+        android:layout_marginEnd="@dimen/xxh_dp_16"
+        android:background="@mipmap/charge_btn_bg"
+        android:gravity="center"
+        android:text="确认充值"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xxh_sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_17"
+        android:layout_marginTop="@dimen/xxh_dp_30"
+        android:text="支付教程"
+        android:textColor="#ff1e2020"
+        android:textSize="16sp"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_confirm_charge" />
+
+    <cn.jzvd.JzvdStd
+        android:id="@+id/jz_player"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xxh_dp_200"
+        android:layout_marginStart="@dimen/xxh_dp_16"
+        android:layout_marginTop="@dimen/xxh_dp_13"
+        android:layout_marginEnd="@dimen/xxh_dp_16"
+        android:background="@drawable/change_center_video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv3" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_17"
+        android:layout_marginTop="@dimen/xxh_dp_17"
+        android:text="温馨提示："
+        android:textColor="#ff1e2020"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jz_player" />
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_17"
+        android:layout_marginTop="@dimen/xxh_dp_10"
+        android:layout_marginEnd="@dimen/xxh_dp_17"
+        android:lineSpacingMultiplier="1.4"
+        android:text="1.充值任意金额就可以免费额外获得相同金额的游戏彩金，充值
+越多，赠送越多。\n
+2.彩金可以通过游戏钱包进行提现，变成人民币。\n
+3.最小充值金额是50人民币，请充值大于50金额。"
+        android:textColor="#ff393a3c"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

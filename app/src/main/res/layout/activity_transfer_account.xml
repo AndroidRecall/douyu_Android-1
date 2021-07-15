@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xxh_dp_234"
+        android:background="@mipmap/transfer_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/title_bar_simple" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_service_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/xxh_dp_15"
+        android:drawableStart="@mipmap/wallet_s"
+        android:drawablePadding="@dimen/xxh_dp_5"
+        android:text="客服中心"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xxh_sp_15"
+        app:layout_constraintBottom_toBottomOf="@id/cl_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cl_1" />
+
+    <View
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/xxh_dp_1"
+        app:layout_constraintBottom_toBottomOf="@id/v1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xxh_dp_100"
+        android:layout_marginStart="@dimen/xxh_dp_17"
+        android:layout_marginEnd="@dimen/xxh_dp_17"
+        android:background="@drawable/drawable_charge_bg"
+        app:layout_constraintBottom_toBottomOf="@id/v2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/v2">
+
+
+        <TextView
+            android:id="@+id/tv_mile_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_17"
+            android:layout_marginTop="@dimen/xxh_dp_20"
+            android:text="￥0"
+            android:textColor="#fffb9f60"
+            android:textSize="21sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxh_dp_6"
+            android:text="@string/wallet"
+            android:textColor="#ff6d2904"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/tv_mile_wallet"
+            app:layout_constraintTop_toBottomOf="@id/tv_mile_wallet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xxh_dp_5"
+            android:text="(转出)"
+            android:textColor="#ff9a6a4c"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv2"
+            app:layout_constraintStart_toEndOf="@id/tv2" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/transfer_center_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_game_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxh_dp_20"
+            android:layout_marginEnd="@dimen/xxh_dp_17"
+            android:text="￥0"
+            android:textColor="#fffb9f60"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxh_dp_6"
+            android:text="游戏钱包"
+            android:textColor="#ff6d2904"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/tv_game_wallet"
+            app:layout_constraintTop_toBottomOf="@id/tv_game_wallet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/xxh_dp_5"
+            android:text="(转入)"
+            android:textColor="#ff9a6a4c"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv3"
+            app:layout_constraintEnd_toStartOf="@id/tv3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="¥"
+        android:textColor="#fff99f62"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@id/cl1"
+        app:layout_constraintTop_toBottomOf="@id/cl1" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_input_money"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_12"
+        android:layout_marginEnd="@dimen/xxh_dp_17"
+        android:inputType="number"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:text="0"
+        android:textColor="#fff99f62"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv4"
+        app:layout_constraintTop_toTopOf="@id/tv4" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/xxh_dp_60"
+        android:layout_marginBottom="@dimen/xxh_dp_25"
+        android:background="@mipmap/transfer_money_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="75dp"
+        android:text="¥0"
+        android:textColor="#fff6c2a5"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_30"
+        android:text="金额:"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_money"
+        app:layout_constraintStart_toStartOf="@id/tv_money"
+        app:layout_constraintTop_toTopOf="@id/tv_money" />
+
+    <TextView
+        android:id="@+id/iv_btn_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/xxh_dp_44"
+        android:layout_marginEnd="@dimen/xxh_dp_10"
+        android:background="@mipmap/transfer_confirm_btn_select"
+        android:gravity="center"
+        android:text="确定转账"
+        android:textColor="#ff713009"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_money"
+        app:layout_constraintEnd_toEndOf="@id/tv_money"
+        app:layout_constraintTop_toTopOf="@id/tv_money" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

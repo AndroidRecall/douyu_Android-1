@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/pusher_info_background"
+    android:orientation="horizontal"
+    android:paddingTop="1dp"
+    android:paddingRight="1dp"
+    android:paddingBottom="1dp"
+    tools:ignore="contentDescription">
+
+    <ImageView
+        android:id="@+id/iv_anchor_head_icon"
+        android:layout_width="@dimen/xxh_dp_15"
+        android:layout_height="@dimen/xxh_dp_15"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/ic_rank_list" />
+
+    <TextView
+        android:id="@+id/tv_medal_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:layout_constraintTop_toTopOf="@+id/iv_anchor_head_icon"
+        app:layout_constraintStart_toEndOf="@+id/iv_anchor_head_icon"
+        app:layout_constraintEnd_toStartOf="@+id/iv_right_arrow"
+        android:layout_marginEnd="@dimen/xxh_dp_2"
+        android:layout_marginStart="@dimen/xxh_dp_2"
+        android:drawableTint="@color/white"
+        tools:text="1604"
+        android:layout_marginLeft="5dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+    <ImageView
+        android:id="@+id/iv_right_arrow"
+        android:layout_width="@dimen/xxh_dp_8"
+        android:layout_height="@dimen/xxh_dp_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@mipmap/mine_self_right"
+        android:layout_marginEnd="@dimen/xxh_dp_4"
+        app:tint="@color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

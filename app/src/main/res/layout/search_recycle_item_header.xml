@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_type_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_12"
+        android:layout_marginTop="@dimen/xxh_dp_12"
+        android:text="相关视频"
+        android:textColor="#ff202121"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="@dimen/xxh_dp_30"
+        android:layout_height="@dimen/xxh_dp_15"
+        android:layout_marginTop="@dimen/xxh_dp_6"
+        android:background="@drawable/search_top_back"
+        app:layout_constraintStart_toStartOf="@id/tv_type_title"
+        app:layout_constraintTop_toTopOf="@id/tv_type_title" />
+
+    <TextView
+        android:id="@+id/tv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@mipmap/mine_self_right"
+        android:drawablePadding="@dimen/xxh_dp_5"
+        android:paddingEnd="@dimen/xxh_dp_12"
+        android:visibility="gone"
+        android:text="更多"
+        android:textColor="#ff98999a"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_type_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_type_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

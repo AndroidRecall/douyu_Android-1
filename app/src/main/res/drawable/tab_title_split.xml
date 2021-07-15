@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/tab_select_color" />
+    <size
+        android:width="15dp"
+        android:height="15dp" />
+    <!--圆角-->
+    <corners android:radius="5dp" />
+</shape>

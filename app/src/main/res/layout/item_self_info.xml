@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/cl_root"
+    android:background="?android:selectableItemBackground"
+    android:layout_height="wrap_content">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWindowBackground"
+        android:gravity="start"
+        android:paddingStart="@dimen/xxh_dp_18"
+        android:paddingTop="@dimen/xxh_dp_6"
+        android:paddingBottom="@dimen/xxh_dp_6"
+        android:text="账号与安全"
+        android:textColor="#ff6e6f71"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_phone_num_alarm"
+        android:layout_width="@dimen/xxh_dp_150"
+        app:layout_constraintEnd_toEndOf="@id/tv_value"
+        android:src="@mipmap/self_phone_num_alarm"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/tv_value"
+        android:layout_height="@dimen/xxh_dp_22"/>
+
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/xxh_dp_1"
+        android:background="@color/colorWindowBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_account" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/xxh_dp_18"
+        android:src="@mipmap/mine_self_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxh_dp_20"
+        android:layout_marginEnd="@dimen/xxh_dp_5"
+        android:layout_marginBottom="@dimen/xxh_dp_20"
+        android:text="小米78279"
+        android:textColor="#ff959797"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv1"
+        app:layout_constraintTop_toBottomOf="@id/v1"
+        app:layout_goneMarginEnd="@dimen/xxh_dp_9" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xxh_dp_18"
+        android:text="昵称"
+        android:textColor="#ff282929"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_value"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_value" />
+</androidx.constraintlayout.widget.ConstraintLayout>

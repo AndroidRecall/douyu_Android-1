@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorRedHint">
+
+    <com.swbg.mlivestreaming.view.JzvdStdTikTok
+        android:id="@+id/jz_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="12dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_border_white">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_follow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_follow_status"
+                    android:layout_width="@dimen/xxh_dp_18"
+                    android:layout_height="@dimen/xxh_dp_18"
+                    android:src="@mipmap/guanzhu_2" />
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_like_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:drawableTop="@drawable/ic_star_selector"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="11.1w"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:drawableTop="@drawable/tiktok_comment_normal"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:text="1.1w"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <!--        <item name="android:layout_width">wrap_content</item>-->
+        <!--        <item name="android:layout_height">wrap_content</item>-->
+        <!--        <item name="android:layout_marginTop">15dp</item>-->
+        <!--        <item name="android:drawablePadding">2dp</item>-->
+        <!--        <item name="android:gravity">center</item>-->
+        <!--        <item name="android:textColor">@android:color/white</item>-->
+        <!--        <item name="android:textSize">12sp</item>-->
+        <TextView
+            android:id="@+id/tv_repost_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:drawableTop="@mipmap/tiktok_btn_share"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            tools:text="1111"
+            android:layout_marginBottom="58dp"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:layout_marginBottom="58dp"
+            android:visibility="gone"
+            android:background="@drawable/tiktok_music_play" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xxh_sp_18"
+        app:layout_constraintStart_toStartOf="@+id/tv_desc"
+        app:layout_constraintBottom_toTopOf="@+id/tv_desc"
+        android:layout_marginBottom="@dimen/xxh_dp_20"
+        android:text="这是标题"/>
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/xxh_dp_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/xxh_dp_50"
+        android:text="这是描述"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

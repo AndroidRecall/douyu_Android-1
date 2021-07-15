@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/xxh_dp_10"
+    android:paddingBottom="@dimen/xxh_dp_10"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<TextView
+    android:id="@+id/tv_no"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginStart="@dimen/xxh_dp_20"
+    android:text="1"
+    android:textColor="@color/white"
+    android:textSize="@dimen/xxh_sp_12"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/xxh_dp_50"
+        android:layout_height="@dimen/xxh_dp_50"
+        android:src="@mipmap/icon_default_header"
+        android:layout_marginStart="@dimen/xxh_dp_20"
+        app:layout_constraintStart_toEndOf="@+id/tv_no"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/xxh_sp_14"
+        android:textColor="@color/white"
+        tools:text="名字"
+        android:text="虚席以待"
+        android:layout_marginStart="@dimen/xxh_dp_20"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+        app:layout_constraintTop_toTopOf="@+id/iv_avatar" />
+    <TextView
+        android:id="@+id/tv_contribute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/xxh_sp_12"
+        android:textColor="@color/white"
+        android:text="虚席以待"
+        tools:text="贡献 10000"
+        android:layout_marginStart="@dimen/xxh_dp_20"
+        app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
