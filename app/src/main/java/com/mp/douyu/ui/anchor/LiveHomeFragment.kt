@@ -16,7 +16,7 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigat
 
 class LiveHomeFragment : MBaseFragment() {
     private val fragments: Array<VisibilityFragment> by lazy {
-        arrayOf(LiveListFragment(), InviteCityFragment(), PaActivityFragment(), FollowLiveListFragment())
+        arrayOf(LiveListFragment(), InviteCityFragment(), FollowLiveListFragment())
     }
     private val tabBeans: List<MiniTabBean> by lazy {
         val liveTabBean = MiniTabBean("美女主播")

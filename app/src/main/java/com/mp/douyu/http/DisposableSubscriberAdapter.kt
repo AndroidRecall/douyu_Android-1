@@ -11,7 +11,7 @@ abstract class DisposableSubscriberAdapter<T>(val iActionEvent: IUIActionEvent? 
     init {
         val stackTrace = Thread.currentThread().stackTrace
         for (element in stackTrace) {
-            if (element.className.startsWith("com.swbg.mlivestreaming") && element.className.contains(
+            if (element.className.startsWith("com.mp.douyu") && element.className.contains(
                             "ViewModel")) {
                 hashCode = element.hashCode()
                 break

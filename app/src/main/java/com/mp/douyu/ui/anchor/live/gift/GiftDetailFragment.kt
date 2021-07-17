@@ -16,7 +16,8 @@ class GiftDetailFragment : VisibilityFragment() {
     private var curPosition: Int = 0
     private var currentPage: Int = 1
     private var pageSize: Int = 10
-    private var type:Int =0;
+    private var type: Int = 0;
+
     companion object {
         const val EXTRA_GIFT_TYPE = "type"
         const val GIFT_TYPE_NOR = 0
@@ -76,7 +77,8 @@ class GiftDetailFragment : VisibilityFragment() {
     override fun onVisibleExceptFirst() {
         super.onVisibleExceptFirst()
     }
-    val  layoutManager by lazy {
+
+    val layoutManager by lazy {
         GridLayoutManager(context, 4)
     }
     val mAdapter by lazy {
@@ -87,16 +89,18 @@ class GiftDetailFragment : VisibilityFragment() {
                 override fun onSelect(position: Int) {
                     if (curPosition != position) {
                         get(curPosition).isSelect = !get(curPosition).isSelect
-                        notifyItemChanged(curPosition)
                         get(position).isSelect = !get(position).isSelect
-                        notifyItemChanged(position)
                         curPosition = position
+                        notifyDataSetChanged()
+
+
 //                        layoutManager.scrollToPositionWithOffset(position,ScreenUtils.dp2px(100f))
                     }
                 }
             })
         }
     }
+
 
     open fun getCurSelectGift(): GiftBean? {
         for (bean in mAdapter) {
@@ -109,8 +113,8 @@ class GiftDetailFragment : VisibilityFragment() {
 
     private val liveViewModel by getViewModel(LiveViewModel::class.java) {
         _giftsData.observe(it, Observer {
-          /*  refreshLayout.finishRefresh()
-            refreshLayout.finishLoadMore()*/
+            /*  refreshLayout.finishRefresh()
+              refreshLayout.finishLoadMore()*/
             it?.let {
                 it.data.let { it1 ->
                     if (it1.size < pageSize) refreshLayout.finishLoadMoreWithNoMoreData()
@@ -128,7 +132,8 @@ class GiftDetailFragment : VisibilityFragment() {
             }
         })
     }
-//    fun smoothScrollUpToPosition(position: Int, itemHeight: Int) {
+
+    //    fun smoothScrollUpToPosition(position: Int, itemHeight: Int) {
 //        val height: Int = layoutManager.findLastVisibleItemPositon() * itemHeight
 //        this.addOnScrollListener(object : OnScrollListener() {
 //            fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
@@ -147,4 +152,5 @@ class GiftDetailFragment : VisibilityFragment() {
 //        })
 //        this.smoothScrollBy(0, -height)
 //    }
+
 }

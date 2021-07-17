@@ -277,7 +277,7 @@ class MineFragment : VisibilityFragment() {
         }
         val get = TokenProvider.get()
         val accessImToken = get.accessImToken
-        val walut = " https://www.exing103.com:1023/app/wallet/myWallet?token=" + accessImToken
+        val walut = "http://site5001-h5.y5fat.com/?token=" + accessImToken
         iv_game_walnut.singleClick {
             Log.e("walut====", walut)
             if (isNotNeedLogin(activity as MBaseActivity)) {

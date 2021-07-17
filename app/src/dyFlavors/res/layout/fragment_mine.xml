@@ -40,7 +40,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <com.swbg.mlivestreaming.view.AllRoundImageView
+            <com.mp.douyu.view.AllRoundImageView
                 android:id="@+id/iv_avatar"
                 android:layout_width="@dimen/xxh_dp_44"
                 android:layout_height="@dimen/xxh_dp_44"
@@ -373,7 +373,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <com.swbg.mlivestreaming.view.MarqueeTextView
+                    <com.mp.douyu.view.MarqueeTextView
                         android:id="@+id/tv_scroll"
                         android:layout_width="0dp"
                         android:layout_height="0dp"

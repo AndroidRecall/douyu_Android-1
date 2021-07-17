@@ -39,6 +39,7 @@ import com.mp.douyu.ui.mine.MineViewModel
 import com.mp.douyu.ui.mine.space.UserSpaceActivity
 import com.mp.douyu.ui.square.RelationViewModel
 import com.mp.douyu.ui.square.SquareHomeFragment
+import com.mp.douyu.utils.ActivityUtils
 import com.mp.douyu.utils.LogUtils
 import com.mp.douyu.utils.RxBus
 import com.mp.douyu.utils.RxUtils
@@ -260,11 +261,23 @@ class MainActivity : MBaseActivity(), View.OnClickListener {
         setTabActivated(4)
 
     }
-
+    val get = TokenProvider.get()
+    val accessImToken = get.accessImToken
+    val walut = "http://site5001-h5.y5fat.com/?token=" + accessImToken
     private fun onGameSelected() {
-        if (isNotNeedLogin(this)) homeViewModel.getGameLink(hashMapOf("game_id" to "0"))
+//        if (isNotNeedLogin(this)) homeViewModel.getGameLink(hashMapOf("game_id" to "0"))
 
 //        setTabActivated(2)
+        if (isNotNeedLogin(this as MBaseActivity)) {
+//                userInfoBean.user?.wallet_url?.let {
+            this?.let { it1 ->
+                ActivityUtils.jumpToWebView(walut,
+                    it1,
+                    true,
+                    webViewTitle = this!!.getString(R.string.wallet))
+            }
+//                }
+        }
     }
 
     private fun onLiveSelected() {
@@ -293,18 +306,18 @@ class MainActivity : MBaseActivity(), View.OnClickListener {
         }
     }
 
-    private val homeViewModel by getViewModel(HomeViewModel::class.java) {
-        _getGameLinkData.observe(it, Observer {
-            it?.let {
-                startActivityWithTransition(BaseWebViewActivity.open(this@MainActivity,
-                    "",
-                    link = "${it.url}",
-                    isGamePage = true,
-                    isMainGamePage = true))
-//                jumpIsToGamePageDialog(it, this@MainActivity)
-            }
-        })
-    }
+//    private val homeViewModel by getViewModel(HomeViewModel::class.java) {
+//        _getGameLinkData.observe(it, Observer {
+//            it?.let {
+//                startActivityWithTransition(BaseWebViewActivity.open(this@MainActivity,
+//                    "",
+//                    link = "${va}",
+//                    isGamePage = true,
+//                    isMainGamePage = true))
+////                jumpIsToGamePageDialog(it, this@MainActivity)
+//            }
+//        })
+//    }
     private val mineViewModel by getViewModel(MineViewModel::class.java) {
         _getDialogList.observe(it, Observer {
             it?.let {

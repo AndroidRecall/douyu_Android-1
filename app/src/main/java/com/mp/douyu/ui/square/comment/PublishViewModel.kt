@@ -33,7 +33,7 @@ class PublishViewModel : MBaseViewModel() {
             object : DisposableSubscriberAdapter<String>(this) {
                 override fun onNext(t: String?) {
                     Log.e(TAG, "publishVideo 上传成功")
-                    ToastUtils.showToast("上传成功")
+                    ToastUtils.showToast("发布成功，审核中")
                     mutableLiveData.value = true
                 }
 

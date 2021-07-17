@@ -19,7 +19,7 @@ class DownLoadManager {
 
     companion object {
         private val TAG: String = DownLoadManager::class.java.simpleName
-        private val sdkAppID: Int = 1400524422
+        private val sdkAppID: Int = 1400547138
 
         val instance: DownLoadManager by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
             DownLoadManager()

@@ -68,6 +68,7 @@ class BaseWebViewActivity : MBaseActivity() {
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         webSettings.setLoadsImagesAutomatically(true);
 
+
         webView.setWebChromeClient(WebChromeClient());//这行最好不要丢掉
         //该方法解决的问题是打开浏览器不调用系统浏览器，直接用webview打开
 
@@ -79,6 +80,12 @@ class BaseWebViewActivity : MBaseActivity() {
             }
 
 
+        }
+        webView.webChromeClient = object : WebChromeClient(){
+            override fun onReceivedTitle(p0: WebView?, p1: String?) {
+                super.onReceivedTitle(p0, p1)
+
+            }
         }
         LogUtils.e("link==", "$link")
         webView.webViewClient = object : WebViewClient() {

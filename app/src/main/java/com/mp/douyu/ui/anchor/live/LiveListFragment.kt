@@ -53,12 +53,18 @@ class LiveListFragment : VisibilityFragment() {
                             override fun onSuccess() {
                                 startActivityWithTransition(AnchorActivity.open(context))
                                 //下播
-                                liveViewModel.startLive(null, null,null, StoredUserSources.getGroupId(), 1)
+                                liveViewModel.startLive(null,
+                                    null,
+                                    null,
+                                    StoredUserSources.getGroupId(),
+                                    1)
                             }
                         },
                         Manifest.permission.READ_EXTERNAL_STORAGE,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA,
-                        Manifest.permission.READ_PHONE_STATE, Manifest.permission.RECORD_AUDIO)
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.CAMERA,
+                        Manifest.permission.READ_PHONE_STATE,
+                        Manifest.permission.RECORD_AUDIO)
 
                 } else {
                     anchorViewModel.getApplyState(hashMapOf())
@@ -139,8 +145,9 @@ class LiveListFragment : VisibilityFragment() {
     private fun toLiveRoom(position: Int) {
         showLoadingView(true)
         currentPosition = position
-        Log.e(TAG,"进入直播间: id= ${mAdapter[position].id}")
-        liveViewModel.enterLive(hashMapOf("live_id" to "${mAdapter[position].anchor?.id}"))
+        Log.e(TAG, "进入直播间: id= ${mAdapter[position].id}")
+        Log.e(TAG, "进入直播间: anchor_id= ${mAdapter[position].anchor_id}")
+        liveViewModel.enterLive(hashMapOf("live_id" to "${mAdapter[position].id}","anchor_id" to "${mAdapter[position].anchor_id}"))
     }
 
     val mLayoutManager by lazy {
@@ -187,7 +194,8 @@ class LiveListFragment : VisibilityFragment() {
             it.let {
                 startActivity(AudienceActivity.open(context,
                     mAdapter.data.subList(mAdapter.getHeaderCount(), mAdapter.data.size),
-                    currentPosition - mAdapter.getHeaderCount(),it))
+                    currentPosition - mAdapter.getHeaderCount(),
+                    it))
             }
         })
     }
@@ -205,18 +213,18 @@ class LiveListFragment : VisibilityFragment() {
             it?.let {
                 if (it.equals("3")) {
                     //未申请，去申请
-                    startActivityWithTransition(AnchorApplyActivity.open(context,it))
+                    startActivityWithTransition(AnchorApplyActivity.open(context, it))
 
-                }else if (it.equals("1")) {
+                } else if (it.equals("1")) {
                     //通过审核
                     startActivityWithTransition(AnchorActivity.open(context))
 
-                }else if (it.equals("2")) {
+                } else if (it.equals("2")) {
                     //未通过
-                    startActivityWithTransition(AnchorApplyActivity.open(context,it))
+                    startActivityWithTransition(AnchorApplyActivity.open(context, it))
                 } else {
                     //审核中
-                    startActivityWithTransition(AnchorApplyActivity.open(context,it))
+                    startActivityWithTransition(AnchorApplyActivity.open(context, it))
                 }
             }
         })

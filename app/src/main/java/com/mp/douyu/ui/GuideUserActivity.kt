@@ -35,7 +35,7 @@ class GuideUserActivity : MBaseActivity() {
         mImages.add(R.mipmap.guide_two)
         mImages.add(R.mipmap.guide_three)
         mImages.add(R.mipmap.guide_four)
-        mImages.add(R.mipmap.guide_five)
+//        mImages.add(R.mipmap.guide_five)
         mImages.mapIndexed { index, i ->
             mFragments.add(GuideFragment.newInstance(index, mImages))
         }

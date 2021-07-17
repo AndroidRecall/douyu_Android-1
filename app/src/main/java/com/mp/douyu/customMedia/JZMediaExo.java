@@ -1,4 +1,4 @@
-//package com.swbg.mlivestreaming.customMedia;
+//package com.mp.douyu.customMedia;
 //
 //import android.content.Context;
 //import android.graphics.SurfaceTexture;

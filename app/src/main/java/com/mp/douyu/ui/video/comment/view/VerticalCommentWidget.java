@@ -1,4 +1,4 @@
-//package com.swbg.mlivestreaming.ui.video.comment.view;
+//package com.mp.douyu.ui.video.comment.view;
 //
 //import android.content.Context;
 //import android.text.SpannableStringBuilder;
@@ -12,10 +12,10 @@
 //import androidx.annotation.Nullable;
 //import androidx.core.content.ContextCompat;
 //
-//import com.swbg.mlivestreaming.R;
-//import com.swbg.mlivestreaming.bean.CommentBean;
-//import com.swbg.mlivestreaming.utils.ScreenUtils;
-//import com.swbg.mlivestreaming.view.gridview.SimpleWeakObjectPool;
+//import com.mp.douyu.R;
+//import com.mp.douyu.bean.CommentBean;
+//import com.mp.douyu.utils.ScreenUtils;
+//import com.mp.douyu.view.gridview.SimpleWeakObjectPool;
 //
 //import java.util.List;
 //

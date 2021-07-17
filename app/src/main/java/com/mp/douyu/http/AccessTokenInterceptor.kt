@@ -25,6 +25,7 @@ internal class AccessTokenInterceptor : Interceptor {
             val tokenProvider = TokenProvider.get()
             request = request.newBuilder()
                     .header("token", tokenProvider.accessToken)
+//                    .header("User-Agent", "kk_app_hybrid")
                     .build()
         }
         return chain.proceed(request)

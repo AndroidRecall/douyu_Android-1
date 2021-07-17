@@ -16,7 +16,7 @@ class ImManager private constructor() {
     var messageListenerList:MutableList<ImMessageListener> = arrayListOf()
     companion object {
         private val TAG: String = ImManager::class.java.simpleName
-        private val sdkAppID: Int = 1400524422
+        private val sdkAppID: Int = 1400547138
 
         val instance: ImManager by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) {
             ImManager()

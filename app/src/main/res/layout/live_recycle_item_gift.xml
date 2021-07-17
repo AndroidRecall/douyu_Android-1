@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:clipChildren="false"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:clipChildren="false">
+
     <TextView
         android:id="@+id/tv_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="@dimen/xxh_sp_12"
-        android:maxLines="1"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="欢乐豆"
-        android:visibility="invisible"
         android:layout_marginTop="@dimen/xxh_dp_10"
-        android:paddingTop="@dimen/xxh_dp_4"
-        android:paddingBottom="@dimen/xxh_dp_4"
-        android:paddingStart="@dimen/xxh_dp_4"
-        android:paddingEnd="@dimen/xxh_dp_4"
+        android:background="@drawable/btn_gradient_201f1f_bg_layer"
         android:gravity="center"
-        android:background="@drawable/btn_gradient_201f1f_bg_layer"/>
+        android:maxLines="1"
+        android:paddingStart="@dimen/xxh_dp_4"
+        android:paddingTop="@dimen/xxh_dp_4"
+        android:paddingEnd="@dimen/xxh_dp_4"
+        android:paddingBottom="@dimen/xxh_dp_4"
+        android:textColor="@color/white"
+        android:textSize="@dimen/xxh_sp_12"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="欢乐豆" />
+
     <FrameLayout
         android:id="@+id/fl_icon"
         android:layout_width="@dimen/xxh_dp_60"
@@ -50,8 +52,8 @@
         android:layout_width="@dimen/xxh_dp_20"
         android:layout_height="@dimen/xxh_dp_20"
         android:layout_marginTop="@dimen/xxh_dp_4"
-        android:visibility="visible"
         android:src="@mipmap/ic_yabo_wallet_coin"
+        android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/tv_price"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@+id/fl_icon"

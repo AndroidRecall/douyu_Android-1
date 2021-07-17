@@ -35,6 +35,7 @@ data class LiveBean(
     var isFollowLive: Int =0,
     var url:String? =null,
     var anchor:AnchorBean? =null,
+    var liveben:LiveBean?=null,
     var user: CommonUserBean?=null,
     var is_follow:Int = 0,
     var isHorizontal: Boolean? = true,

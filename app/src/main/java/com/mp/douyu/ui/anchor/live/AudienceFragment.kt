@@ -242,7 +242,7 @@ class AudienceFragment : BaseLiveFragment() {
     private fun toOtherLiveRoom(position: Int) {
         currentPosition = position
         Log.e(TAG, "进入直播间: id= ${otherAdapter[position].id}")
-        liveViewModel.enterLive(hashMapOf("live_id" to "${otherAdapter[position].id}"))
+        liveViewModel.enterLive(hashMapOf("live_id" to "${otherAdapter[position].id}","anchor_id" to "${otherAdapter[position].anchor_id}"))
     }
 
     private fun showGiftAnim(bean: SendGiftBean) {
@@ -870,7 +870,7 @@ class AudienceFragment : BaseLiveFragment() {
     private fun toLiveRoom(position: Int) {
         currentPosition = position
         Log.e(TAG, "进入直播间: id= ${mAdapter.get(position).id}")
-        liveViewModel.enterLive(hashMapOf("live_id" to "${mAdapter.get(position).id}"))
+        liveViewModel.enterLive(hashMapOf("live_id" to "${mAdapter[position].id}","anchor_id" to "${mAdapter[position].anchor_id}"))
     }
 
     private fun randomAvatarList(list: MutableList<CommonUserBean>): MutableList<CommonUserBean> {
