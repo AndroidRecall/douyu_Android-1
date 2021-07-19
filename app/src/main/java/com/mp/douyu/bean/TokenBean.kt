@@ -7,15 +7,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Keep
 @Parcelize
-data class TokenBean(
-    @SerializedName("token")
-    var accessToken: String = "",
-    @SerializedName("user_info")
-    val userInfo: UserInfo? = null,
-    var userName: String? = "",
-    var userPsw: String? = "",
-    var userSig: String? = "",
-    var userID: Int? = 0) :
+data class TokenBean(@SerializedName("token") var accessToken: String = "", @SerializedName("user_info") val userInfo: UserInfo? = null, var userName: String? = "", var userPsw: String? = "", var userSig: String? = "", var userID: Int? = 0) :
     Parcelable
 
 

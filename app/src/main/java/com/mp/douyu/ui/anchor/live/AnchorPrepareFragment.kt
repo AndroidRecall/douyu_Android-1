@@ -185,7 +185,7 @@ open class AnchorPrepareFragment : VisibilityFragment() {
             dismissLoading()
             it?.let {
                 RxBus.getInstance().post(LiveEvent(it))
-                StoredUserSources.putGroupId(it.GroupId)
+                StoredUserSources.putGroupId(it.Group_id)
             }
         })
     }

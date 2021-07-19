@@ -292,6 +292,7 @@ class AudienceFragment : BaseLiveFragment() {
                         isAutoFirst = true
                         joinLiveRoom(0)
                         autoPlayVideo(0)
+                        sendLiveTextMsg("进入直播间")
                     }
                 }
 

@@ -52,7 +52,7 @@ class LiveListFragment : VisibilityFragment() {
                         object : PermissionHelper.PermissionCallback {
                             override fun onSuccess() {
                                 startActivityWithTransition(AnchorActivity.open(context))
-                                //下播
+                                //开播
                                 liveViewModel.startLive(null,
                                     null,
                                     null,

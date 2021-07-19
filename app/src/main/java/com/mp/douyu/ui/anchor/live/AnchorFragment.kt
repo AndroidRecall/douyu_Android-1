@@ -237,8 +237,9 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
         XPopup.Builder(context).asConfirm("提示","确定下播?",object :OnConfirmListener{
             override fun onConfirm() {
                 var status = 1
-                var groupId = "${bean?.GroupId}"
-                liveViewModel.startLive(null, null,null, groupId, status)
+                var groupId = "${bean?.Group_id}"
+//                liveViewModel.startLive(null, null,null, groupId, status)
+                liveViewModel.stopLive(null,null,groupId,status)
                 sendLiveTextMsg("@#直播间关闭")
             }
         })
@@ -275,7 +276,7 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
 
     override fun sendLiveTextMsg(text: String) {
         ImManager.instance.sendLiveTextMessage(text,
-            "${bean?.GroupId}",
+            "${bean?.Group_id}",
             V2TIMMessage.V2TIM_PRIORITY_NORMAL,
             object : V2TIMValueCallback<V2TIMMessage> {
                 override fun onSuccess(p0: V2TIMMessage?) {
@@ -418,14 +419,14 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
 
     override fun onMemberLeave(groupID: String?, member: V2TIMGroupMemberInfo?) {
         super.onMemberLeave(groupID, member)
-        if (groupID != null && groupID == "${bean?.GroupId}") {
+        if (groupID != null && groupID == "${bean?.Group_id}") {
             addMessage(ChatMsgBean(nickname = member?.nickName, content = "离开直播间"))
         }
     }
 
     override fun onMemberEnter(groupID: String?, memberList: MutableList<V2TIMGroupMemberInfo>?) {
         super.onMemberEnter(groupID, memberList)
-        if (groupID != null && groupID == "${bean?.GroupId}") {
+        if (groupID != null && groupID == "${bean?.Group_id}") {
             memberList?.forEach { member ->
                 addMessage(ChatMsgBean(nickname = member.nickName, content = "进入直播间"))
             }
@@ -446,7 +447,7 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
 
     override fun onRecvGroupTextMessage(msgID: String?, groupID: String?, sender: V2TIMGroupMemberInfo?, text: String?) {
         super.onRecvGroupTextMessage(msgID, groupID, sender, text)
-        if (groupID != null && groupID == "${bean?.GroupId}") {
+        if (groupID != null && groupID == "${bean?.Group_id}") {
             fetchMsg(sender?.nickName!!,text!!)
         }
     }
@@ -494,7 +495,7 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
 //                mAdapter.notifyItemChanged(currentPosition)
             }
         })
-        _startLiveData.observe(it, Observer {
+        _stopLiveData.observe(it, Observer {
             it?.let {
                 //本来是在接口关闭，但是接口经常请求错误，那就点击关闭按钮之后在发送关闭消息后结束页面
 //                this@AnchorFragment.finishView()

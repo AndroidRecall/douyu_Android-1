@@ -43,9 +43,7 @@ class WithdrawActivity : MBaseActivity() {
                 return@singleClick
             }
 
-            anchorViewModel.withdraw(hashMapOf("amount" to "${amount}",
-                "account_id" to "${accountRes?.id}",
-                "name" to "${anchorBean?.name}"))
+            anchorViewModel.withdraw(hashMapOf("amount" to "${amount}", "account_id" to "${accountRes?.id}"))
         }
         val accountDialog by lazy {
             XPopup.Builder(this@WithdrawActivity)

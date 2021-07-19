@@ -100,7 +100,7 @@ class FollowLiveListFragment : VisibilityFragment() {
         currentPosition = position
         Log.e(TAG,"进入直播间: id= ${mAdapter.get(position).id}")
         Log.e(TAG,"进入直播间: anchor_id= ${mAdapter.get(position).anchor_id}")
-        liveViewModel.enterLive(hashMapOf("live_id" to "${mAdapter[position].liveben?.id}","anchor_id" to "${mAdapter[position].liveben?.anchor_id}"))
+        liveViewModel.enterLive(hashMapOf("live_id" to "${mAdapter[position].id}","anchor_id" to "${mAdapter[position].anchor_id}"))
     }
     private val anchorViewModel by getViewModel(AnchorViewModel::class.java) {
         followLiveListData.observe(it, Observer {
