@@ -25,7 +25,7 @@ data class LiveStreamingBean(
     var create_time: String? = null,
     var image: String? = null,
     var push_url: String? = null,
-    var Group_id: String? = null,
+    var GroupId: String? = null,
     var user: CommonUserBean? = null
     ):Parcelable {
 

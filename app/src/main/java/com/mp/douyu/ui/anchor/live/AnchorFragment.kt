@@ -91,6 +91,7 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
             fragment.arguments = bundle
             return fragment
         }
+
     }
 
 
@@ -237,7 +238,7 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
         XPopup.Builder(context).asConfirm("提示","确定下播?",object :OnConfirmListener{
             override fun onConfirm() {
                 var status = 1
-                var groupId = "${bean?.Group_id}"
+                var groupId = "${bean?.GroupId}"
 //                liveViewModel.startLive(null, null,null, groupId, status)
                 liveViewModel.stopLive(null,null,groupId,status)
                 sendLiveTextMsg("@#直播间关闭")
@@ -248,6 +249,7 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
         super.onDestroyView()
         stopPusher()
     }
+
 
     private fun startPusher(pushUrl: String?) {
         val rtmpURL = pushUrl //此处填写您的 rtmp 推流地址
@@ -260,7 +262,7 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
     private fun stopPusher() {
         mLivePusher.apply {
             stopPusher()
-            stopCameraPreview(true);//如果已经启动了摄像头预览，请在结束推流时将其关闭。
+            stopCameraPreview(true)//如果已经启动了摄像头预览，请在结束推流时将其关闭。
         }
     }
 
@@ -276,7 +278,7 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
 
     override fun sendLiveTextMsg(text: String) {
         ImManager.instance.sendLiveTextMessage(text,
-            "${bean?.Group_id}",
+            "${bean?.GroupId}",
             V2TIMMessage.V2TIM_PRIORITY_NORMAL,
             object : V2TIMValueCallback<V2TIMMessage> {
                 override fun onSuccess(p0: V2TIMMessage?) {
@@ -419,14 +421,14 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
 
     override fun onMemberLeave(groupID: String?, member: V2TIMGroupMemberInfo?) {
         super.onMemberLeave(groupID, member)
-        if (groupID != null && groupID == "${bean?.Group_id}") {
+        if (groupID != null && groupID == "${bean?.GroupId}") {
             addMessage(ChatMsgBean(nickname = member?.nickName, content = "离开直播间"))
         }
     }
 
     override fun onMemberEnter(groupID: String?, memberList: MutableList<V2TIMGroupMemberInfo>?) {
         super.onMemberEnter(groupID, memberList)
-        if (groupID != null && groupID == "${bean?.Group_id}") {
+        if (groupID != null && groupID == "${bean?.GroupId}") {
             memberList?.forEach { member ->
                 addMessage(ChatMsgBean(nickname = member.nickName, content = "进入直播间"))
             }
@@ -447,7 +449,7 @@ class AnchorFragment(var bean: LiveStreamingBean? = null) : BaseLiveFragment() {
 
     override fun onRecvGroupTextMessage(msgID: String?, groupID: String?, sender: V2TIMGroupMemberInfo?, text: String?) {
         super.onRecvGroupTextMessage(msgID, groupID, sender, text)
-        if (groupID != null && groupID == "${bean?.Group_id}") {
+        if (groupID != null && groupID == "${bean?.GroupId}") {
             fetchMsg(sender?.nickName!!,text!!)
         }
     }

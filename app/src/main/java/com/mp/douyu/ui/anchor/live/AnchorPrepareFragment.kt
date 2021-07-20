@@ -40,6 +40,7 @@ open class AnchorPrepareFragment : VisibilityFragment() {
             // 一般情况下不需要修改 config 的默认配置
             config = TXLivePushConfig()
             startCameraPreview(anchor_video_view)
+
         }
     }
 
@@ -185,7 +186,7 @@ open class AnchorPrepareFragment : VisibilityFragment() {
             dismissLoading()
             it?.let {
                 RxBus.getInstance().post(LiveEvent(it))
-                StoredUserSources.putGroupId(it.Group_id)
+                StoredUserSources.putGroupId(it.GroupId)
             }
         })
     }

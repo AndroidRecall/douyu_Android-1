@@ -309,6 +309,7 @@
         android:layout_margin="@dimen/xxh_dp_20"
         android:background="@drawable/shape_b14afd_radius_c10"
         app:layout_constraintTop_toBottomOf="@+id/cl_income"
+        android:visibility="gone"
         android:text="申请提现"/>
     <TextView
         android:id="@+id/tv_record"

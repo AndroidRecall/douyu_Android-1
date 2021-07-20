@@ -47,7 +47,7 @@ object Respository {
             "password" to it.psw,
             "os" to "Android${DeviceUtil.getBuildVersion()}",
             "model" to DeviceUtil.getPhoneModel(),
-            "pid" to it.extensionCode,
+            "reg_promo_code" to it.extensionCode,
             "channel" to BuildConfig.CHANNEL_ID,
             "code" to it.verifyCode)).retryWhen(RetryFilterFun()).map(HttpBodyFun())
             .compose(SchedulersTransformer()).subscribe(param)
@@ -59,7 +59,7 @@ object Respository {
             "model" to DeviceUtil.getPhoneModel(),
             "password" to it.psw,
             "channel" to BuildConfig.CHANNEL_ID,
-            "pid" to it.extensionCode)).retryWhen(RetryFilterFun()).map(HttpBodyFun())
+            "reg_promo_code" to it.extensionCode)).retryWhen(RetryFilterFun()).map(HttpBodyFun())
             .compose(SchedulersTransformer()).subscribe(dispose)
     }
 

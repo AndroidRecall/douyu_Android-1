@@ -242,7 +242,8 @@ class AudienceFragment : BaseLiveFragment() {
     private fun toOtherLiveRoom(position: Int) {
         currentPosition = position
         Log.e(TAG, "进入直播间: id= ${otherAdapter[position].id}")
-        liveViewModel.enterLive(hashMapOf("live_id" to "${otherAdapter[position].id}","anchor_id" to "${otherAdapter[position].anchor_id}"))
+        liveViewModel.enterLive(hashMapOf("live_id" to "${otherAdapter[position].id}",
+            "anchor_id" to "${otherAdapter[position].anchor_id}"))
     }
 
     private fun showGiftAnim(bean: SendGiftBean) {
@@ -642,7 +643,7 @@ class AudienceFragment : BaseLiveFragment() {
                 getCurViewHolder().let { it1 ->
                     (it1 as LiveDetailAdapter.LiveHolder).apply {
                         iv_follow_status.visibility =
-                            if (liveBean.isFollowLive== 0) View.VISIBLE else View.GONE
+                            if (liveBean.isFollowLive == 0) View.VISIBLE else View.GONE
                     }
                 }
             }
@@ -669,6 +670,7 @@ class AudienceFragment : BaseLiveFragment() {
                                     TXLiveConstants.PLAY_EVT_CONNECT_SUCC -> {
                                         //已经连接服务器
                                         audience_background.visibility = View.GONE
+                                        Log.e("Player", "收到首帧数据")
                                     }
                                     TXLiveConstants.PLAY_EVT_RCV_FIRST_I_FRAME -> {
                                         Log.e("Player", "收到首帧数据")
@@ -706,7 +708,8 @@ class AudienceFragment : BaseLiveFragment() {
 
                         })
                         context?.let {
-                            Log.e(TAG,"播放流地址:${curLiveRoomInfo?.pull_url}")
+                            Log.e(TAG, "播放流地址:${curLiveRoomInfo?.pull_url}")
+                            Log.e(TAG, "推流地址:${curLiveRoomInfo?.push_url}")
                             TXLivePlayerManager.getInstance(it).livePlayer.startPlay(curLiveRoomInfo?.pull_url,
                                 TXLivePlayer.PLAY_TYPE_VOD_HLS)
 //                            TXLivePlayerManager.getInstance(it).livePlayer.startPlay(curLiveRoomInfo?.pull_url,
@@ -871,7 +874,8 @@ class AudienceFragment : BaseLiveFragment() {
     private fun toLiveRoom(position: Int) {
         currentPosition = position
         Log.e(TAG, "进入直播间: id= ${mAdapter.get(position).id}")
-        liveViewModel.enterLive(hashMapOf("live_id" to "${mAdapter[position].id}","anchor_id" to "${mAdapter[position].anchor_id}"))
+        liveViewModel.enterLive(hashMapOf("live_id" to "${mAdapter[position].id}",
+            "anchor_id" to "${mAdapter[position].anchor_id}"))
     }
 
     private fun randomAvatarList(list: MutableList<CommonUserBean>): MutableList<CommonUserBean> {

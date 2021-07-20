@@ -326,6 +326,7 @@ class LiveViewModel : MBaseViewModel() {
                 }
             })
         mutableLiveData
+
     }
     val _stopLiveData = Transformations.switchMap(allStopLiveData) { it ->
         val mutableLiveData = MutableLiveData<String>()
@@ -363,7 +364,7 @@ class LiveViewModel : MBaseViewModel() {
             bodyMap["notice"] = UploadUtils.toRequestBody(it)!!
         }
         groupId?.let {
-            bodyMap["Group_id"] = UploadUtils.toRequestBody(it)!!
+            bodyMap["GroupId"] = UploadUtils.toRequestBody(it)!!
         }
         bodyMap["status"] = UploadUtils.toRequestBody(status.toString())!!
         allStartLiveData.value = UploadParam(parts = parts, bodyMap = bodyMap)
@@ -386,7 +387,7 @@ class LiveViewModel : MBaseViewModel() {
             bodyMap["title"] = UploadUtils.toRequestBody(it)!!
         }
         groupId?.let {
-            bodyMap["Group_id"] = UploadUtils.toRequestBody(it)!!
+            bodyMap["GroupId"] = UploadUtils.toRequestBody(it)!!
         }
         bodyMap["status"] = UploadUtils.toRequestBody(status.toString())!!
         allStopLiveData.value = UploadParam(parts = parts, bodyMap = bodyMap)
